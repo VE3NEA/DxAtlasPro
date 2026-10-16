@@ -1,0 +1,1069 @@
+{
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
+  "source_base_path": "/home/runner/work/DxAtlasPro/DxAtlasPro/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "credits.md",
+      "output": {
+        ".html": {
+          "relative_path": "credits.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "developers_guide/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "developers_guide/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/toc.html"
+        },
+        ".json": {
+          "relative_path": "developers_guide/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "download.md",
+      "output": {
+        ".html": {
+          "relative_path": "download.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "gallery.md",
+      "output": {
+        ".html": {
+          "relative_path": "gallery.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/DxAtlasPro.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/DxAtlasPro.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/amateur_radio_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/amateur_radio_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/arrl_sections.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/arrl_sections.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/clock_fixed.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/clock_fixed.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/color-picker.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/color-picker.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/colors_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/colors_dialog.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cq-zones.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/cq-zones.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dock.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dock.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dxatlaspro_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dxatlaspro_icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dxcc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dxcc.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/email_me.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/email_me.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/first_start_question.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/first_start_question.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/alps.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/alps.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/alps_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/alps_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/azimuthal-projection.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/azimuthal-projection.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/azimuthal-projection_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/azimuthal-projection_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/dxcc-cq-zones.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/dxcc-cq-zones.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/dxcc-cq-zones_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/dxcc-cq-zones_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/f2-layer-critical-frequency.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/f2-layer-critical-frequency.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/f2-layer-critical-frequency_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/f2-layer-critical-frequency_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/fiji.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/fiji.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/fiji_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/fiji_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/globe.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/globe.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/globe_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/globe_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/grayline.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/grayline.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/grayline_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/grayline_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/grid-squares.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/grid-squares.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/grid-squares_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/grid-squares_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/iota-groups.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/iota-groups.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/iota-groups_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/iota-groups_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/item-details.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/item-details.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/item-details_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/item-details_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/madagascar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/madagascar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/madagascar_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/madagascar_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/nepal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/nepal.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/nepal_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/nepal_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/real-time-aurora.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/real-time-aurora.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/real-time-aurora_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/real-time-aurora_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/real-time-propagation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/real-time-propagation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/real-time-propagation_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/real-time-propagation_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/time-zones.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/time-zones.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/time-zones_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/time-zones_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/two-panels.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/two-panels.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/two-panels_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/two-panels_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/worked-cq-zones.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/worked-cq-zones.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/worked-cq-zones_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/worked-cq-zones_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/world-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/world-view.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/gallery/world-view_TH.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/gallery/world-view_TH.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/great_circle.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/great_circle.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ionosphere_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ionosphere_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ionospheric_parameters.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ionospheric_parameters.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/labels_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/labels_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/layers_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/layers_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/lines_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/lines_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/lists_panel.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/lists_panel.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/map_toolbar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/map_toolbar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pins.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/pins.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/precompute_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/precompute_dialog.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/prefix_search.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/prefix_search.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/settings_dialog.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/settings_dialog.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/status_bar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/status_bar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/view_menu.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/view_menu.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/window-layout.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/window-layout.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "register.md",
+      "output": {
+        ".html": {
+          "relative_path": "register.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/amateur_radio_switch.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/amateur_radio_switch.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/arrl_rac_sections.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/arrl_rac_sections.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/award_tracking.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/award_tracking.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/clock.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/clock.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/colors.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/colors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/cq_itu_zones.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/cq_itu_zones.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/create_custom_layer.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/create_custom_layer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/dxcc_entities.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/dxcc_entities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/great_circle.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/great_circle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/home_location.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/home_location.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/installation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/ionospheric_maps.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/ionospheric_maps.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/iota.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/iota.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/item_details.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/item_details.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/layers_lines_labels.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/layers_lines_labels.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/lists_panel.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/lists_panel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/named_views.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/named_views.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/navigating_the_map.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/navigating_the_map.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/other_entity_classes.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/other_entity_classes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/pdf_cover.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/pdf_cover.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/pins.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/pins.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/precompute_propagation.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/precompute_propagation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/prefix_search.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/prefix_search.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/propagation_prediction.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/propagation_prediction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/quick_start.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/quick_start.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/reading_the_maps.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/reading_the_maps.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/status_bar.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/status_bar.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/system_requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/system_requirements.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "users_guide/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/toc.html"
+        },
+        ".json": {
+          "relative_path": "users_guide/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/vucc_grid.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/vucc_grid.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/window_layout.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/window_layout.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

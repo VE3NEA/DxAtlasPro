@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Projections, Zoom and Pan | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Projections, Zoom and Pan | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/navigating_the_map.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="projections-zoom-and-pan">Projections, Zoom and Pan</h1>
+
+<p>Each of the two map panels has a toolbar above the map:</p>
+<p><img src="../images/map_toolbar.png" alt="The map toolbar, with the Amateur Radio functions on"></p>
+<ul>
+<li><strong>Projection</strong> - the projection of this map;</li>
+<li><strong>Layers</strong>, <strong>Lines</strong> and <strong>Labels</strong> - what the map shows; see
+<a href="layers_lines_labels.html">Layers, Lines and Labels</a>;</li>
+<li><strong>Amateur Radio</strong> and <strong>Ionosphere</strong> - shown only with the Amateur Radio functions on; see
+<a href="amateur_radio_switch.html">The Amateur Radio Switch</a>;</li>
+<li><strong>Home</strong> - see <a href="home_location.html">Home Location</a>.</li>
+</ul>
+<p>The two maps are independent: each has its own projection, centre, zoom and layers.</p>
+<h2 id="projections">Projections</h2>
+<p>Click the <strong>Projection</strong> button and pick one of the three projections. The button shows the
+glyph of the current one.</p>
+<ul>
+<li><strong>Rectangular</strong> - the whole world in one rectangle, latitude and longitude as straight lines;</li>
+<li><strong>Azimuthal</strong> - the azimuthal equidistant projection, centred on one point: every straight line
+through the centre is a great circle, and the distance and the bearing from the centre to any
+point are true. When you switch to it, the map is centred on your home location;</li>
+<li><strong>Globe</strong> - the Earth as seen from space.</li>
+</ul>
+<p><img src="../images/gallery/azimuthal-projection.png" alt="Azimuthal projection"></p>
+<p><img src="../images/gallery/globe.png" alt="Globe"></p>
+<h2 id="zoom">Zoom</h2>
+<p>Turn the mouse wheel over the map to zoom in and out; three steps of the wheel double or halve the
+magnification. On the rectangular map the zoom keeps the point under the mouse in place, so the
+wheel takes you to a place as well as closer to it. The azimuthal map and the globe zoom about
+their centre, which stays where it is.</p>
+<p>The status bar shows the scale of the map under the mouse, in metres or feet per pixel, as set in
+the <strong>Units</strong> section of the <a href="settings.html">Settings Dialog</a>.</p>
+<h2 id="pan">Pan</h2>
+<ul>
+<li><strong>Rectangular map</strong> - drag the map with the left mouse button;</li>
+<li><strong>Globe</strong> - drag the globe to turn it;</li>
+<li><strong>Azimuthal map</strong> - its centre is chosen, not dragged, since every distance and bearing on it is
+measured from the centre. Shift-click a point to make it the centre, or right-click it and pick
+<strong>Set as Center</strong>. Ctrl+Shift-click a point, or pick <strong>Set Antipode as Center</strong>, to centre the map
+on the point opposite it on the globe.</li>
+</ul>
+<p>The <strong>Home</strong> button on the toolbar shows the whole world on the rectangular map, and centres the
+azimuthal map and the globe on your home location.</p>
+<h2 id="linking-the-two-maps">Linking the Two Maps</h2>
+<p>Alt-click a point on one map, or right-click it and pick <strong>Center Other Map Here</strong>, to centre the
+other map on that point; the other map keeps its projection and zoom. This works while both maps
+are shown.</p>
+<p>The keys held with each click can be changed in the <strong>Mouse Clicks</strong> section of the
+<a href="settings.html">Settings Dialog</a>.</p>
+<h2 id="the-maps-context-menu">The Map's Context Menu</h2>
+<p>Right-click the map for a menu of what can be done at that point:</p>
+<ul>
+<li><strong>Show Details for ...</strong> - the <a href="item_details.html">Item Details</a> of the label under the mouse, or
+of everything at the point;</li>
+<li><strong>Find in List</strong> - select the item under the mouse in the <a href="lists_panel.html">Lists Panel</a>;</li>
+<li><strong>Set as Center</strong> and <strong>Set Antipode as Center</strong> - on the azimuthal map only;</li>
+<li><strong>Center Other Map Here</strong>;</li>
+<li><strong>Set Home Location Here</strong> - see <a href="home_location.html">Home Location</a>;</li>
+<li><strong>Add Pin</strong> and <strong>Remove Pin</strong> - see <a href="pins.html">Pins</a>.</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

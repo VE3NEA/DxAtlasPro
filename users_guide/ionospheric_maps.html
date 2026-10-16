@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Ionospheric Maps | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Ionospheric Maps | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/ionospheric_maps.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ionospheric-maps">Ionospheric Maps</h1>
+
+<p><img src="../images/gallery/f2-layer-critical-frequency.png" alt="F2 layer critical frequency"></p>
+<p><img src="../images/gallery/real-time-aurora.png" alt="Real-time aurora"></p>
+<p>The <strong>Ionosphere</strong> button on the map toolbar, shown with the Amateur Radio functions on, draws
+maps of the ionosphere over the world map. The maps are computed by the program with the IRI-2026
+model of the International Reference Ionosphere, for the moment the <a href="clock.html">Clock</a> panel shows:
+the current time, or a fixed time in the past or the future. What each map tells a DXer is
+explained in <a href="reading_the_maps.html">Reading the Maps for DX'ing</a>.</p>
+<h2 id="the-ionosphere-button">The Ionosphere Button</h2>
+<p><img src="../images/ionosphere_menu.png" alt="The Ionosphere button's menu"></p>
+<ul>
+<li><strong>HF Propagation</strong>, <strong>Band</strong> and <strong>Long Path</strong> - the propagation map; see
+<a href="propagation_prediction.html">Propagation Prediction</a>;</li>
+<li><strong>None</strong>, or one of the ionospheric maps:
+<ul>
+<li><strong>F2 Layer Critical Frequency</strong> - foF2, the highest frequency the F2 layer reflects straight
+up, in MHz; see <a href="reading_the_maps.html#fof2-and-muf3000">foF2 and MUF(3000)</a>;</li>
+<li><strong>MUF for 3000 km</strong> - MUF(3000), the highest frequency that one 3000 km hop through the F2
+layer supports, in MHz, banded at the amateur bands; see
+<a href="reading_the_maps.html#fof2-and-muf3000">foF2 and MUF(3000)</a>;</li>
+<li><strong>F2 Layer Peak Height</strong> - hmF2, the height of the F2 layer's peak, in km; see
+<a href="reading_the_maps.html#hmf2">hmF2</a>;</li>
+<li><strong>E Layer Critical Frequency</strong> - foE, in MHz; see <a href="reading_the_maps.html#foe">foE</a>;</li>
+<li><strong>D Layer Peak Electron Density</strong> - NmD, in units of 10⁸ electrons per cubic metre; see
+<a href="reading_the_maps.html#nmd">NmD</a>;</li>
+</ul>
+</li>
+<li><strong>Magnetic Dip</strong> - the dip equator and the lines of 20° and 40° magnetic dip on either side of it,
+with dashed lines 2000 km beyond the 40° lines; see
+<a href="reading_the_maps.html#magnetic-dip">Magnetic Dip</a>;</li>
+<li><strong>Aurora</strong> - the auroral oval, the probability of visible aurora, from the NOAA Space Weather
+Prediction Center's OVATION model; see <a href="reading_the_maps.html#the-aurora-oval">The Aurora Oval</a>.</li>
+</ul>
+<p>The maps between the separators exclude one another, and exclude HF Propagation too: picking one
+replaces the map shown. <strong>Magnetic Dip</strong> and <strong>Aurora</strong> are checkboxes of their own, drawn alone or
+over any map. Each map panel has its own choice, so the two maps can show different maps.</p>
+<h2 id="reading-a-map">Reading a Map</h2>
+<p>Each map is drawn in bands of colour, with the legend in the lower left corner of the map: its
+name and its unit. The status bar's 📶 cell shows the
+value at the point under the mouse - <code>7.2 MHz</code>, <code>312 km</code>, and with Magnetic Dip and Aurora on,
+<code>dip 23°</code> and <code>aurora 15%</code> after it. While a map is being computed, the cell shows <code>…</code>.</p>
+<h2 id="the-ionospheric-parameters-dialog">The Ionospheric Parameters Dialog</h2>
+<p><strong>Tools &gt; Ionospheric Parameters...</strong> shows the solar and geomagnetic indices the maps are computed
+from, and where each one came from:</p>
+<p><img src="../images/ionospheric_parameters.png" alt="The Ionospheric Parameters dialog"></p>
+<ul>
+<li><strong>Sunspot number</strong> - the smoothed sunspot number of the map's month;</li>
+<li><strong>Ap index</strong> - the geomagnetic activity index;</li>
+<li><strong>Use STORM Model</strong> - corrects foF2 for geomagnetic storms, from the recent history of the Ap
+index, on the ionospheric and the propagation maps. It is disabled while there is no Ap data;</li>
+<li><strong>Auroral Oval</strong> - the state of the aurora data.</li>
+</ul>
+<p>With <strong>Auto</strong> ticked, a box shows the value the maps use. Clear <strong>Auto</strong> to enter a value of your
+own, then click <strong>Apply</strong> to see the maps with it - what the bands would look like at a sunspot
+number of 200, say. The values entered last until the program closes; on the next start, both rows
+return to Auto.</p>
+<h3 id="where-the-values-come-from">Where the Values Come From</h3>
+<p>After each value, one word says where it came from; hover over it for the date:</p>
+<ul>
+<li><strong>file</strong> - the index file installed with the program, until a download arrives;</li>
+<li><strong>web</strong> - downloaded;</li>
+<li><strong>user</strong> - entered by you;</li>
+<li><strong>estimated</strong> - the map's date is past the end of the data, so the last value is used: the
+sunspot number at any date, the Ap index only within 9 hours of the last value;</li>
+<li><strong>not fetched</strong> - the aurora, while no map shows it; it is downloaded only then;</li>
+<li><strong>no data</strong> - nothing to use. With no Ap data the storm model is skipped; with no aurora data
+no aurora is drawn.</li>
+</ul>
+<p>An amber <strong>⚠</strong> before the word means a download failed and older data is used; hover over it for
+the error and the time of the next attempt. The <strong>⟳</strong> button after the word retries the download
+at once. A red <strong>✕</strong> means there is no data at all.</p>
+<h3 id="the-downloads">The Downloads</h3>
+<p>The program downloads the indices by itself, and only while a map that uses them is shown:</p>
+<ul>
+<li>the Ap index from the GFZ Helmholtz Centre for Geosciences, every 3 hours, as each new value is
+published;</li>
+<li>the sunspot numbers from irimodel.org, once a month;</li>
+<li>the aurora from the NOAA Space Weather Prediction Center, every 15 minutes while a map shows it.</li>
+</ul>
+<p>Without an Internet connection, the maps are computed from the index files installed with the
+program, and from the last downloaded data.</p>
+<p><em>The real-time aurora, the Ap index and the sunspot numbers are available only as long as the NOAA
+Space Weather Prediction Center, the GFZ Helmholtz Centre for Geosciences and irimodel.org provide
+them on the web. If a source stops publishing its data or changes its format, the maps that use it
+fall back to the data already downloaded or installed with the program.</em></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

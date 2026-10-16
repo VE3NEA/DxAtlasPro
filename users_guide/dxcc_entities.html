@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>DXCC Entities and Prefixes | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="DXCC Entities and Prefixes | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/dxcc_entities.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="dxcc-entities-and-prefixes">DXCC Entities and Prefixes</h1>
+
+<p><img src="../images/dxcc.png" alt="DXCC entities and their prefixes"></p>
+<h2 id="on-the-map">On the Map</h2>
+<p>The first four checkboxes of the <strong>Amateur Radio</strong> button draw the DXCC entities and their
+subdivisions. Each one switches a set of boundaries and its prefix labels together:</p>
+<ul>
+<li><strong>DXCC Entities</strong> - the borders of all 340 current DXCC entities, and their prefixes. The
+borders between countries that are also DXCC entities are drawn by <strong>Political Boundaries</strong> in
+the <a href="layers_lines_labels.html">Lines</a> menu as well, so the two can be shown separately;</li>
+<li><strong>Call Areas</strong> - the call areas of the larger entities, such as W4 or VE3, and their prefixes;</li>
+<li><strong>Provinces</strong> - the provinces, states and oblasts that have prefixes of their own, and their
+prefixes. Call Areas and Provinces are available only while DXCC Entities is on;</li>
+<li><strong>WAE Entities</strong> - the countries of the DARC's Worked All Europe list, such as the Shetland
+Islands (GM/s) or Sicily (IT9), and their prefixes. While it is on, the WAE borders replace the
+DXCC, call area and province boundaries, so WAE Entities and DXCC Entities are never on together:
+ticking one clears the other.</li>
+</ul>
+<p>Hover the mouse over a prefix to see the name of its entity, province or call area; for a call
+area, its definition. Click a prefix to see its <a href="item_details.html">Item Details</a>: the prefix, the CQ
+and ITU zones, the continent, the ADIF number and the local time.</p>
+<h2 id="in-the-lists-panel">In the Lists Panel</h2>
+<p>The <strong>DXCC entities</strong> layer of the <a href="lists_panel.html">Lists Panel</a> lists the entities as a tree: each
+DXCC entity, the call areas under it, and the provinces under them, as the prefixes are
+structured. The <strong>Prefix</strong> column shows each one's prefix, and the triangle before it opens and
+closes its rows. Type a callsign in the Search box to find its entity; see
+<a href="prefix_search.html">Prefix Search</a>.</p>
+<p>With a list selected, only the DXCC entities have checkboxes: a DXCC list is a list of entities,
+and the call areas and provinces under them are there to be looked up. See
+<a href="award_tracking.html">Award Tracking</a>.</p>
+<p>The <strong>WAE countries</strong> layer lists the WAE countries by their prefixes, and the <strong>WAS</strong> layer the 50
+US states, Alaska and Hawaii among them, for the Worked All States award.</p>
+<p><em>DXCC is a trademark of the ARRL; the DXCC entity list is reprinted with the permission of the
+ARRL. For the DXCC programme and its rules, see <a href="https://www.arrl.org/dxcc">www.arrl.org/dxcc</a>.</em></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

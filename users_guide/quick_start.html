@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Quick Start | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Quick Start | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/quick_start.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="quick-start">Quick Start</h1>
+
+<h2 id="first-start">First Start</h2>
+<p>When DX Atlas Pro starts for the first time, it asks whether to enable the Amateur Radio functions:</p>
+<p><img src="../images/first_start_question.png" alt="The question on the first start"></p>
+<ul>
+<li>answer <strong>Yes</strong> to show the DXCC entities, zones, award tracking, ionospheric maps and propagation
+prediction;</li>
+<li>answer <strong>No</strong> to use the program as a general-purpose world atlas.</li>
+</ul>
+<p>The answer is not final: <strong>Tools &gt; Amateur Radio Functions</strong> turns the functions on and off at any
+time. See <a href="amateur_radio_switch.html">The Amateur Radio Switch</a>.</p>
+<h2 id="setting-the-home-location">Setting the Home Location</h2>
+<p>The home location is your own location on the globe. It is marked on both maps, the distances and
+bearings in the status bar are measured from it, the Clock panel shows its sunrise and sunset, and
+the azimuthal map is centred on it.</p>
+<p>To set it, do one of the following:</p>
+<ul>
+<li>right-click your location on the map and pick <strong>Set Home Location Here</strong>, then confirm the
+coordinates in the message box;</li>
+<li>open <strong>Tools &gt; Settings</strong>, and enter your latitude and longitude, or your Maidenhead grid square,
+in the <strong>Home Location</strong> section.</li>
+</ul>
+<p>See <a href="home_location.html">Home Location</a>.</p>
+<h2 id="finding-your-way-around">Finding Your Way Around</h2>
+<ul>
+<li>drag the map with the left mouse button to pan it, and turn the mouse wheel to zoom in and out;</li>
+<li>click the <strong>Projection</strong> button at the left end of the map toolbar to switch between the
+rectangular map, the azimuthal map and the globe;</li>
+<li>click the <strong>Layers</strong>, <strong>Lines</strong> and <strong>Labels</strong> buttons to choose what the map shows;</li>
+<li>hover the mouse over a label to see its tooltip, and right-click the map for a menu of what you
+can do at that point;</li>
+<li>type a name in the <strong>Search</strong> box of the <strong>Lists</strong> panel, then double-click a row to find that
+item on the map.</li>
+</ul>
+<p>The rest of this guide describes each of these in detail. <a href="window_layout.html">Window Layout</a> explains
+the panels of the main window.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

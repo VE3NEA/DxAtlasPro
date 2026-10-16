@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Layers, Lines and Labels | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Layers, Lines and Labels | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/layers_lines_labels.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="layers-lines-and-labels">Layers, Lines and Labels</h1>
+
+<p>Three buttons on the map toolbar choose what the map shows: <strong>Layers</strong>, <strong>Lines</strong> and <strong>Labels</strong>.
+Each opens a list of checkboxes; tick a checkbox to show its layer, clear it to hide the layer. The
+choices are made for each map separately, and saved when the program closes.</p>
+<p>The Amateur Radio layers - DXCC entities, zones, IOTA groups and the rest - are in a fourth
+button's menu, shown only with the Amateur Radio functions on; see
+<a href="amateur_radio_switch.html">The Amateur Radio Switch</a>.</p>
+<h2 id="layers">Layers</h2>
+<p><img src="../images/layers_menu.png" alt="The Layers button's menu"></p>
+<ul>
+<li><strong>Land Relief</strong> - the shaded relief and land cover of the land. Cleared, the land is one flat
+colour;</li>
+<li><strong>Ocean Relief</strong> - the depth and the shaded relief of the sea floor. Cleared, the sea is one flat
+colour. Clear both to read boundary lines against a plain map; the two flat colours are set in
+the <a href="colors.html">Colors Dialog</a>;</li>
+<li><strong>Home</strong> - the mark of your home location, a house, or an antenna with the Amateur Radio
+functions on;</li>
+<li><strong>Lakes</strong>, <strong>Rivers</strong>, <strong>Ice Shelves</strong> and <strong>Urban Areas</strong>.</li>
+</ul>
+<p><img src="../images/gallery/alps.png" alt="Shaded relief of the Alps"></p>
+<h2 id="lines">Lines</h2>
+<p><img src="../images/lines_menu.png" alt="The Lines button's menu"></p>
+<ul>
+<li><strong>Political Boundaries</strong> - the borders between countries;</li>
+<li><strong>Graticule</strong> - the lines of latitude and longitude, labelled with their degrees;</li>
+<li><strong>Azimuth/Distance</strong> - great circles radiating from your home location, and circles of equal
+distance around it, labelled with their bearings and distances. The distance circles are drawn
+every 3000 km, the length of an F2 hop. On the azimuthal map they radiate from the centre of the
+map;</li>
+<li><strong>Time Zones</strong> - the time zones, filled in alternating colours;</li>
+<li><strong>Gray Line</strong> - the day and night terminator and the night shadow, with the sun at the point
+where it is overhead;</li>
+<li><strong>Date Line</strong> - the international date line.</li>
+</ul>
+<p>The coastline has no checkbox: it is always drawn.</p>
+<p><img src="../images/gallery/time-zones.png" alt="Time zones"></p>
+<p><img src="../images/gallery/grayline.png" alt="Gray line"></p>
+<h3 id="the-gray-line">The Gray Line</h3>
+<p>The gray line follows the sun as the time goes by, at the time the <a href="clock.html">Clock</a> panel shows:
+the computer's time, or a fixed time of your choice. Which of its parts are drawn - the sun, the
+terminator, the twilight shadow and the night shadow - where the night shadow begins, and how
+often it is redrawn are set in the <strong>Map</strong> section of the <a href="settings.html">Settings Dialog</a>.</p>
+<h2 id="labels">Labels</h2>
+<p><img src="../images/labels_menu.png" alt="The Labels button's menu"></p>
+<ul>
+<li><strong>Countries</strong>;</li>
+<li><strong>Islands</strong> - islands and island groups;</li>
+<li><strong>Cities</strong>;</li>
+<li><strong>Seas</strong> - oceans, seas, gulfs, bays and ice shelves;</li>
+<li><strong>Lakes and Rivers</strong>;</li>
+<li><strong>Mountains</strong> - mountain ranges and summits;</li>
+<li><strong>Physical features</strong> - deserts, plateaus, peninsulas, capes and other regions.</li>
+</ul>
+<p>The labels are placed so that they never overlap. At a world view only the largest features are
+labelled, and more labels appear as you zoom in.</p>
+<h3 id="tooltips">Tooltips</h3>
+<p>Hover the mouse over a label to see its tooltip: the full name of the item, or, for the Amateur
+Radio labels, the name of a DXCC entity or province, or the definition of a zone or a call area.
+Click a label to see the <a href="item_details.html">Item Details</a> of the item it names.</p>
+<h2 id="colours">Colours</h2>
+<p>The colours and line widths of all layers, and the colours, sizes and fonts of all labels, are set
+in the <a href="colors.html">Colors Dialog</a>.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

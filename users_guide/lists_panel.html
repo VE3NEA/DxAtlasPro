@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>The Lists Panel | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="The Lists Panel | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/lists_panel.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="the-lists-panel">The Lists Panel</h1>
+
+<p>The <strong>Lists</strong> panel shows the items of a map layer - countries, cities, islands, rivers and the
+rest - as a list that you can search and sort, and links that list to the maps: pick a row to find
+its item on the map, or pick an item on the map to find its row.</p>
+<p><img src="../images/lists_panel.png" alt="The Lists panel on the Cities layer, London typed in the Search box"></p>
+<p>The panel has three boxes at the top and the list of items under them.</p>
+<h2 id="layer">Layer</h2>
+<p>The <strong>Layer</strong> box selects the layer the list shows:</p>
+<ul>
+<li><p>the layers of the atlas, named and grouped as in the <strong>Labels</strong> menu of the map, so that every
+name on the map is a row of one of them, and every row a name on the map:</p>
+<ul>
+<li><strong>Countries</strong>;</li>
+<li><strong>Islands</strong> - islands and island groups;</li>
+<li><strong>Cities</strong>;</li>
+<li><strong>Seas</strong> - oceans, seas, gulfs, bays, straits and ice shelves;</li>
+<li><strong>Lakes and Rivers</strong>;</li>
+<li><strong>Mountains</strong> - mountain ranges and summits;</li>
+<li><strong>Physical features</strong> - deserts, plateaus, peninsulas, coasts and other regions.</li>
+</ul>
+<p>Cities and islands have their country in brackets after the name, so that the many cities named
+Paris can be told apart;</p>
+</li>
+<li><p>your own layers, read from files; see <a href="create_custom_layer.html">Create a Custom Layer</a>;</p>
+</li>
+<li><p><strong>Pins</strong>; see <a href="pins.html">Pins</a>.</p>
+</li>
+</ul>
+<p>With the Amateur Radio functions on, the Layer box also lists the Amateur Radio layers, first; see
+<a href="prefix_search.html">Prefix Search</a> and <a href="award_tracking.html">Award Tracking</a>.</p>
+<p>The layer selected is saved when the program closes.</p>
+<h2 id="list">List</h2>
+<p>Some layers keep <strong>lists</strong>: named sets of the layer's items that you create. With a list selected,
+each row has a checkbox, ticked when its item is in the list; tick or clear it to add or remove the
+item. The lists are saved as soon as they change.</p>
+<p>The List box holds:</p>
+<ul>
+<li><strong>&lt;none&gt;</strong> - no list selected, and no checkboxes;</li>
+<li>the lists of the layer, by name;</li>
+<li><strong>New List...</strong> - prompts for a name and creates an empty list;</li>
+<li><strong>Delete List...</strong> - deletes the selected list, once you confirm it.</li>
+</ul>
+<p>The layers of the atlas - cities, countries, rivers and the rest - are for looking items up and
+have no lists, so their List box is disabled. Your own layers and the Pins layer have lists, and so
+do the Amateur Radio layers, on which the lists track awards. The format of the files that your own
+layers are read from is described in <a href="create_custom_layer.html">Create a Custom Layer</a>.</p>
+<h2 id="search">Search</h2>
+<p>Type a name in the <strong>Search</strong> box and the list shows only the items whose names match. Every word
+typed must match the start of a word of the name: <code>new y</code> finds New York. The ✕ button right of
+the box clears it.</p>
+<p>By default a name matches by its letters, ignoring case. In the <strong>Lists</strong> section of the
+<a href="settings.html">Settings Dialog</a>, <strong>Name Search</strong> can be set to match names by their sound instead,
+so that a misspelt name still finds its item: <em>Gray</em> finds <em>Grey</em>.</p>
+<h2 id="the-list-of-items">The List of Items</h2>
+<p>The list shows the items' names, and for the layers whose items have a readable id, such as a zone
+number, a second column with the id. On a layer that holds items of several types, such as
+<strong>Mountains</strong> or <strong>Seas</strong>, the second column is <strong>Type</strong> instead: Range, Mountain, Gulf, Strait and
+so on. Click a column header to sort by that column; click it again to reverse the order.</p>
+<p>Hover the mouse over a name to see its tooltip.</p>
+<h3 id="from-a-row-to-the-map">From a Row to the Map</h3>
+<p><strong>Double-click a row</strong>, or right-click it and pick <strong>Find on Map</strong>, to find its item: the item is
+highlighted on both maps with a yellow outline, or with a ring at its point, and the map you last
+used is centred on it and zoomed so that the item spans about half of the map.</p>
+<p><strong>Ctrl-click a row</strong>, or right-click it and pick <strong>Show Details</strong>, to see its
+<a href="item_details.html">Item Details</a>.</p>
+<h3 id="from-the-map-to-a-row">From the Map to a Row</h3>
+<p>Right-click an item on the map and pick <strong>Find in List</strong>: its row is selected and scrolled into
+view, its layer is made current if it is not, and the item is highlighted on both maps. The map is
+not moved.</p>
+<p>A click on the map clears the highlight.</p>
+<p>The keys of these clicks can be changed in the <strong>Mouse Clicks</strong> section of the Settings dialog. The
+<strong>Find in List / on Map</strong> action has no keys by default; give it keys there to find a row's item, or
+a map item's row, with a single click.</p>
+<h2 id="hiding-the-panel">Hiding the Panel</h2>
+<p>While the Lists panel is hidden, the maps show no highlight, no pins and no award colouring.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

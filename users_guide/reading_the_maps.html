@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Reading the Maps for DX&#39;ing | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Reading the Maps for DX&#39;ing | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/reading_the_maps.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="reading-the-maps-for-dxing">Reading the Maps for DX'ing</h1>
+
+<p>A propagation prediction answers one question: on this band, at this hour, how strong will the
+signal be along the great circle between two stations? It answers it for the median day of the
+month, and on any given day the answer may be wrong. The path may be absorbed, the band may close
+early, or the signal may arrive from a direction no prediction offered.</p>
+<p>The ionospheric maps of DX Atlas Pro are a road atlas for those days. They show the state of each
+layer of the ionosphere across the whole globe, so you can see why a predicted path failed, and
+find another route for the signal: a skewed path, a chordal hop, the long path, or a band that is
+open along a different arc.</p>
+<p>This page explains what each map tells a DXer. The controls that show the maps are described in
+<a href="ionospheric_maps.html">Ionospheric Maps</a> and <a href="propagation_prediction.html">Propagation Prediction</a>.</p>
+<p>The ionospheric maps are computed with the IRI-2026 model, which gives the monthly median
+ionosphere for the sunspot number of the month. With <strong>Use STORM Model</strong> on, foF2 is corrected for
+the geomagnetic activity of the last hours, which brings the maps closer to the ionosphere of the
+day during a storm.</p>
+<h2 id="fof2-and-muf3000">foF2 and MUF(3000)</h2>
+<p><strong>foF2</strong>, the critical frequency of the F2 layer, is the highest frequency that the layer reflects
+straight up. <strong>MUF(3000)</strong>, the maximum usable frequency of a 3000 km hop, is about three times
+foF2. A path is open when the band is below MUF(3000) at its control points, about 1500 km from
+each end of the path; a shorter hop has a lower MUF. The distance circles of the
+<strong>Azimuth/Distance</strong> lines (<a href="layers_lines_labels.html">Layers, Lines and Labels</a>) are drawn every
+3000 km, the length of an F2 hop, so each circle marks where a hop from their centre lands.</p>
+<p>Where foF2 rises steeply along the path, the signal may travel in <strong>chordal hops</strong>, without
+touching the ground between, and stay strong. Where the great circle crosses a region of low foF2,
+the signal may arrive by a <strong>skewed path</strong> through higher foF2 off the great circle, from an
+unexpected bearing.</p>
+<h2 id="hmf2">hmF2</h2>
+<p><strong>hmF2</strong> is the height of the F2 layer's peak, typically 250 to 400 km. The higher the layer, the
+longer each hop, the fewer hops a long path needs, and the smaller the factor between foF2 and
+MUF(3000).</p>
+<h2 id="foe">foE</h2>
+<p><strong>foE</strong>, the critical frequency of the E layer, follows the sun: up to about 4 MHz at noon in
+summer, almost nothing at night. On the low bands in daytime, the E layer can keep a low-angle
+signal from reaching the F2 layer, reflecting it in hops of at most 2000 km or absorbing it. The
+map shows the regular E layer only, not sporadic E.</p>
+<h2 id="nmd">NmD</h2>
+<p><strong>NmD</strong> is the electron density of the D layer, which absorbs HF signals on the day side, the more
+the lower the frequency. On 160, 80 and 40 metres it decides whether a daytime signal arrives at
+all; the low bands open where the D layer fades, near the gray line and at night.</p>
+<h2 id="gray-line">Gray Line</h2>
+<p>Near the terminator, the D layer has faded while the F2 layer is still ionized, so absorption on
+the low bands is low and the signals are strong. Propagation on 160, 80 and 40 metres is enhanced
+when both stations are near the terminator: both at sunrise, both at sunset, or one at sunrise and
+the other at sunset.</p>
+<p>At the height of the F2 layer, about 300 km, the sun rises earlier and sets later than on the
+ground: the layer stays sunlit until the sun is about 17° below the ground's horizon, an hour or
+more after sunset on the ground, and comes into sunlight as long before sunrise.</p>
+<p>Astronomical twilight, which ends with the sun 18° under the horizon, corresponds to sunrise and
+sunset at the F2 layer's height. Set <strong>Twilight</strong> to <strong>Astronomical</strong> in the <strong>Map</strong> section of the
+<a href="settings.html">Settings Dialog</a>: the night shadow then begins where the F2 layer goes dark, and the
+lighter band between the terminator and the night shadow is where the F2 layer is still sunlit
+while the ground is dark.</p>
+<p>The terminator's path across the globe changes with the season, so a gray-line opening to a given
+station happens only in some months. To find them, show the <strong>Gray Line</strong>
+(<a href="layers_lines_labels.html">Layers, Lines and Labels</a>), click the sunrise or sunset lock button in
+the <a href="clock.html">Clock</a> panel, and step the date by one month. The time stays at your sunrise or
+sunset; the months in which the gray line passes over the DX station are the months when both
+stations are at the gray line.</p>
+<h2 id="magnetic-dip">Magnetic Dip</h2>
+<p>The <strong>magnetic dip</strong> is the angle of the Earth's magnetic field to the horizontal. At the dip
+equator the field is horizontal, and there the ionization of the F2 layer is lifted and moved
+north and south by the combined action of the electric and the magnetic fields. This <strong>equatorial
+ionization anomaly</strong> leaves two crests of high foF2 on either side of the dip equator, which the
+foF2 map shows on the day side, strongest in the afternoon and the evening.</p>
+<p>The crests support <strong>trans-equatorial propagation</strong> (TEP) on 10 and 6 metres: between stations on
+opposite sides of the dip equator, roughly the same distance from it, the signal travels from crest
+to crest in a chordal hop, at frequencies far above the MUF of ordinary hops. The lines of 40°
+dip on either side bound the anomaly, and the dashed lines 2000 km beyond them mark how far from
+the anomaly a station can be and still reach it.</p>
+<h2 id="the-aurora-oval">The Aurora Oval</h2>
+<p>The <strong>aurora oval</strong> is the ring around each magnetic pole where particles from the Sun enter the
+upper atmosphere. It grows and moves towards the equator during geomagnetic storms. HF signals that
+cross the oval are absorbed, and those that get through arrive weak and fluttering: a polar path,
+such as Europe to the west coast of North America, is the first to suffer.</p>
+<p>The oval also opens the high bands. <strong>Auroral E</strong>, the ionization of the E layer in the oval,
+reflects and scatters signals on 10, 6 and 2 metres; stations beam towards the oval rather than
+towards each other, and the signals have a characteristic rasp.</p>
+<p>The map shows the probability of aurora from the NOAA Space Weather Prediction Center's OVATION
+model, downloaded every 15 minutes while the map is shown.</p>
+<h2 id="hf-propagation">HF Propagation</h2>
+<p>The <strong>HF Propagation</strong> map shows the signal strength from your home location, on the band and at
+the hour set, at every point of the globe, computed with the VOACAP model for the median day of
+the month, and with <strong>Use STORM Model</strong> on, corrected for the geomagnetic activity of the day. The
+reading is in S units of 6 dB, for the transmitter power and the antenna gains set
+in the <strong>Propagation</strong> section of the <a href="settings.html">Settings Dialog</a>.</p>
+<p>When a station differs from the settings, shift the reading:</p>
+<ul>
+<li>every 6 dB of power or antenna gain is one S unit: four times the power, or an antenna of 6 dBi
+in place of 0 dBi, adds one S unit, and a quarter of the power takes one away;</li>
+<li>the gains at both ends count, so a beam at the receiving station adds as much as one at yours;</li>
+<li>doubling the power adds only 3 dB, half an S unit.</li>
+</ul>
+<h2 id="finding-an-alternate-route">Finding an Alternate Route</h2>
+<p>When the predicted path fails, read the maps together:</p>
+<ul>
+<li><strong>a polar path absorbed in the aurora oval</strong> - show the Aurora over the HF Propagation map. If
+the short path crosses the oval, try the long path (<strong>Long Path</strong> in the Ionosphere menu), or a
+skewed path that passes south of the oval, where the foF2 map shows the band is supported;</li>
+<li><strong>a path through low foF2</strong> - show the foF2 or MUF(3000) map, and look along and beside the great
+circle for a region where the band is below the MUF. A signal skewed through it arrives off the
+great-circle bearing, so turn the beam towards that region;</li>
+<li><strong>a path across the dip equator on 10 or 6 metres</strong> - show the Magnetic Dip lines over the foF2
+map. In the afternoon and evening, the equatorial crests may carry the signal in chordal hops
+well above the predicted MUF;</li>
+<li><strong>a low band closed in daytime</strong> - show the NmD map and the Gray Line. Absorption falls first
+where the D layer fades along the terminator, so the low bands open along the gray line.</li>
+</ul>
+<p>Fix the <a href="clock.html">Clock</a> and step it through the hours to see how each map, and so each route,
+changes through the day.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Carl Luetzelschwab, K9LA, <a href="https://k9la.us/">k9la.us</a>;</li>
+<li>OH3AC, <em>F-Region Propagation and the Equatorial Ionospheric Anomaly</em>,
+<a href="http://www.oh3ac.fi/QEX-2016-11.pdf">QEX, November 2016</a>;</li>
+<li>Dean Straw, N6BV, <a href="https://www.voacap.com/2023/documents/N6BV_Visalia_2010.pdf">Visalia 2010 paper</a>
+on reading predictions in S units;</li>
+<li>the <a href="https://www.voacap.com/2023/voacap-papers.html">VOACAP papers</a>.</li>
+</ul>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

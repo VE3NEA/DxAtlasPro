@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Create a Custom Layer | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Create a Custom Layer | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/create_custom_layer.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="create-a-custom-layer">Create a Custom Layer</h1>
+
+<p>You can add layers of your own to the <a href="lists_panel.html">Lists Panel</a>: mountain summits you climbed,
+lighthouses, the parks of a park award. Each layer is a JSON file in the <code>Layers</code> folder of the
+user data folder, and appears in the <strong>Layer</strong> box under its own name. A user layer has lists, as
+the award layers do, so you can track which of its items you have visited or worked.</p>
+<h2 id="the-layers-folder">The Layers Folder</h2>
+<p><strong>Help &gt; Data Folder...</strong> opens the user data folder, which holds the settings, the lists and the
+caches:</p>
+<ul>
+<li>on Windows, <code>%APPDATA%\Afreet\Products\DxAtlasPro</code>;</li>
+<li>on Linux, <code>~/.config/Afreet/Products/DxAtlasPro</code>.</li>
+</ul>
+<p>Create a folder named <code>Layers</code> there, and put the layer files in it. The files are read when the
+program starts, so restart it after adding or editing a file.</p>
+<h2 id="the-file-format">The File Format</h2>
+<p>One file is one layer, and the file name, without <code>.json</code>, is the layer's id: rename a file and its
+lists are lost. An example:</p>
+<pre><code class="lang-json">{
+  &quot;name&quot;: &quot;Summits&quot;,
+  &quot;idColumn&quot;: true,
+  &quot;entities&quot;: [
+    { &quot;id&quot;: &quot;W7A/AE-001&quot;, &quot;name&quot;: &quot;Humphreys Peak&quot;, &quot;lat&quot;: 35.346, &quot;lon&quot;: -111.678 },
+    { &quot;id&quot;: &quot;W7A/AE-002&quot;, &quot;name&quot;: &quot;Agassiz Peak&quot;, &quot;lat&quot;: 35.326, &quot;lon&quot;: -111.677,
+      &quot;tooltip&quot;: &quot;3766 m&quot; }
+  ]
+}
+</code></pre>
+<ul>
+<li><strong><code>name</code></strong> - the layer's name in the Layer box;</li>
+<li><strong><code>idColumn</code></strong> - <code>true</code> to show the items' ids in a column of their own beside the names,
+<code>false</code> to show the names alone;</li>
+<li><strong><code>entities</code></strong> - the items.</li>
+</ul>
+<p>Each item has:</p>
+<ul>
+<li><strong><code>id</code></strong> - unique in the layer; the lists keep the items by their ids;</li>
+<li><strong><code>name</code></strong> - shown in the list and searched; the id when it is missing;</li>
+<li><strong><code>lat</code></strong> and <strong><code>lon</code></strong> - the item's position, in degrees, positive north and east;</li>
+<li><strong><code>tooltip</code></strong> - optional, the text shown when the mouse is over the name;</li>
+<li><strong><code>geometry</code></strong> - optional, the item's area, as a GeoJSON <code>Polygon</code> or <code>MultiPolygon</code>.</li>
+</ul>
+<h3 id="reference-items">Reference Items</h3>
+<p>Instead of its own position, an item can name an item that the program already has, with <code>ref</code>
+written as <code>class:id</code>. It then takes the position, the area and the tooltip of that item, and an
+<code>id</code> or <code>name</code> given beside the <code>ref</code> replaces that item's own:</p>
+<pre><code class="lang-json">{ &quot;id&quot;: &quot;AL&quot;, &quot;ref&quot;: &quot;province:W.W4.W4(AL)&quot; }
+</code></pre>
+<p>The program does not show the ids of its own items, so reference items are mainly for layers built
+from the program's data. The layer of the US states that ships with the program is written this
+way, and is a working example to copy: on Windows,
+<code>C:\Program Files\Afreet\DxAtlasPro\assets\entities\layers\WAS.json</code>, and on Linux,
+<code>assets/entities/layers/WAS.json</code> in the program folder.</p>
+<h2 id="how-a-user-layer-is-shown">How a User Layer Is Shown</h2>
+<p>A user layer is not drawn on the map as a whole. When you find one of its items from the list, the
+item is highlighted: by its area, by the area of the item its <code>ref</code> names, or by a ring at its
+point.</p>
+<p>Large layers are fine: a layer of 180,000 summits is searched as fast as a small one.</p>
+<h2 id="errors">Errors</h2>
+<p>A file that cannot be read does not stop the program. When it starts, a message lists what could
+not be read - a file that is not valid JSON, a <code>ref</code> that names no item, an id used twice in one
+layer - and the rest of the file is loaded.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

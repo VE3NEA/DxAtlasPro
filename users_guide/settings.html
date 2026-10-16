@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Settings Dialog | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Settings Dialog | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/settings.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBFBX51E8H"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EBFBX51E8H');
+      </script>
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="settings-dialog">Settings Dialog</h1>
+
+<p><strong>Tools &gt; Settings</strong> opens the Settings dialog: a list of settings in sections, each section
+folding open to its fields.</p>
+<p><img src="../images/settings_dialog.png" alt="The Settings dialog, Home Location and Mouse Clicks open"></p>
+<ul>
+<li>click a field to edit it; its description is shown under the list;</li>
+<li>right-click a field's name and pick <strong>Reset</strong> to return it to its default value;</li>
+<li><strong>OK</strong> applies the changes and closes the dialog, <strong>Apply</strong> applies them and keeps it open, and
+<strong>Cancel</strong> discards the changes not yet applied.</li>
+</ul>
+<p>A grid square that is not a valid Maidenhead locator, or two mouse click actions given the same
+keys, are reported when you click OK or Apply, and nothing is applied until they are corrected.</p>
+<h2 id="home-location">Home Location</h2>
+<p>Your location, marked on both maps; see <a href="home_location.html">Home Location</a>.</p>
+<ul>
+<li><strong>Latitude</strong> - in degrees, positive north;</li>
+<li><strong>Longitude</strong> - in degrees, positive east;</li>
+<li><strong>Grid Square</strong> - your 4- or 6-character Maidenhead locator. Entering it moves the latitude and
+longitude to the centre of the square.</li>
+</ul>
+<h2 id="units">Units</h2>
+<ul>
+<li><strong>Distance</strong> - <strong>km / m</strong>, <strong>Miles / Feet</strong> or <strong>Nautical Miles / Feet</strong>: the first unit for the
+distances in the status bar and on the map, the second for the elevation and the map scale in
+the status bar.</li>
+</ul>
+<h2 id="map">Map</h2>
+<p>The settings both maps share:</p>
+<ul>
+<li><strong>Gray Line Update Interval</strong> - how often the gray line is redrawn as the sun moves, in seconds;</li>
+<li><strong>Gray Line</strong> - the parts of the gray line drawn while it is on, and where its night shadow begins:
+<ul>
+<li><strong>Sun</strong> - the sun glyph at the point where the sun is overhead;</li>
+<li><strong>Terminator</strong> - the line between day and night;</li>
+<li><strong>Twilight Shadow</strong> - a lighter band between the terminator and the night shadow;</li>
+<li><strong>Night Shadow</strong> - the darker shadow over the night side;</li>
+<li><strong>Twilight</strong> - where the twilight shadow ends and the night shadow begins: at the end of
+<strong>Civil</strong>, <strong>Nautical</strong> or <strong>Astronomical</strong> twilight, with the sun 6°, 12° or 18° under the
+horizon.</li>
+</ul>
+</li>
+</ul>
+<h2 id="propagation">Propagation</h2>
+<p>What the propagation map is computed for; see
+<a href="propagation_prediction.html">Propagation Prediction</a>. This section is shown only with the
+<a href="amateur_radio_switch.html">Amateur Radio functions</a> on.</p>
+<h2 id="lists">Lists</h2>
+<ul>
+<li><strong>Name Search</strong> - how the Search box of the <a href="lists_panel.html">Lists Panel</a> matches names:
+<strong>Exact</strong>, by their letters, ignoring case, or <strong>Phonetic</strong>, by their sound, so <em>Gray</em> finds
+<em>Grey</em>.</li>
+</ul>
+<h2 id="mouse-clicks">Mouse Clicks</h2>
+<p>The keys held with a click for each action, on a map or on a row of the Lists panel. Each action
+can be given <strong>Click</strong>, <strong>Ctrl-Click</strong>, <strong>Shift-Click</strong>, <strong>Alt-Click</strong>, <strong>Ctrl+Shift-Click</strong>,
+<strong>Ctrl+Alt-Click</strong> or <strong>Alt+Shift-Click</strong>, or <strong>Off</strong> for no keys. No two actions may have the same
+keys, but any number may be off. Every action is also in the map's context menu, whatever its keys.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Show Details</strong></td>
+<td>Ctrl-Click</td>
+<td>shows the <a href="item_details.html">Item Details</a> of what is under the click, or of the row clicked</td>
+</tr>
+<tr>
+<td><strong>Find in List / on Map</strong></td>
+<td>Off</td>
+<td>on a map, selects the item clicked in the Lists panel; on a row, finds its item on the map</td>
+</tr>
+<tr>
+<td><strong>Set as Center</strong></td>
+<td>Shift-Click</td>
+<td>centres the azimuthal map on the point clicked</td>
+</tr>
+<tr>
+<td><strong>Set Antipode as Center</strong></td>
+<td>Ctrl+Shift-Click</td>
+<td>centres the azimuthal map on the point opposite the one clicked</td>
+</tr>
+<tr>
+<td><strong>Center Other Map</strong></td>
+<td>Alt-Click</td>
+<td>centres the other map on the point clicked</td>
+</tr>
+<tr>
+<td><strong>Set as Home</strong></td>
+<td>Off</td>
+<td>makes the point clicked your home location, once you confirm it</td>
+</tr>
+</tbody>
+</table>
+<p>A plain click on a label shows its Item Details unless an action has been given <strong>Click</strong>.</p>
+<h2 id="api">API</h2>
+<p>The WebSocket API through which other programs on this computer drive the maps: the <strong>Port</strong> they
+connect to, and the <strong>Allowed Origins</strong>, the web pages that may connect. See the
+<a href="https://ve3nea.github.io/DxAtlasPro/developers_guide/overview.html">Developer's Guide</a>.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
