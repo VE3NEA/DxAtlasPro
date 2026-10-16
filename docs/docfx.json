@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,htm,html,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "templates/my-template"
+    ],
+    "globalMetadata": {
+      "_appName": "DX Atlas Pro",
+      "_appTitle": "DX Atlas Pro",
+      "_appFaviconPath": "images/DxAtlasPro.ico",
+      "_appLogoPath": "images/dxatlaspro_icon.png",
+      "_enableSearch": true,
+      "pdfFileName": "dxatlaspro_users_guide.pdf",
+      "pdfTocPage": true,
+      "pdfCoverPage": "users_guide/pdf_cover.html",
+      "_disableContribution": true,
+      "_googleAnalyticsTagId": "G-EBFBX51E8H"
+    }
+  }
+}

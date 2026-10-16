@@ -1,0 +1,77 @@
+pdf: true
+name: User's Guide
+items:
+  - name: Overview
+    href: overview.md
+  - name: System Requirements
+    href: system_requirements.md
+  - name: Installation
+    href: installation.md
+  - name: Getting Started
+    items:
+    - name: Quick Start
+      href: quick_start.md
+    - name: Window Layout
+      href: window_layout.md
+  - name: The Map
+    items:
+    - name: Projections, Zoom and Pan
+      href: navigating_the_map.md
+    - name: Layers, Lines and Labels
+      href: layers_lines_labels.md
+    - name: Home Location
+      href: home_location.md
+    - name: Pins
+      href: pins.md
+    - name: Item Details
+      href: item_details.md
+    - name: Named Views
+      href: named_views.md
+    - name: Clock and Fixed Time
+      href: clock.md
+    - name: Status Bar
+      href: status_bar.md
+  - name: Lists
+    items:
+    - name: The Lists Panel
+      href: lists_panel.md
+  - name: Settings
+    items:
+    - name: Settings Dialog
+      href: settings.md
+    - name: Colors Dialog
+      href: colors.md
+  - name: Amateur Radio
+    items:
+    - name: The Amateur Radio Switch
+      href: amateur_radio_switch.md
+    - name: Great Circle
+      href: great_circle.md
+    - name: Prefix Search
+      href: prefix_search.md
+    - name: DXCC Entities and Prefixes
+      href: dxcc_entities.md
+    - name: CQ and ITU Zones
+      href: cq_itu_zones.md
+    - name: IOTA
+      href: iota.md
+    - name: VUCC Grid Squares
+      href: vucc_grid.md
+    - name: ARRL/RAC Sections
+      href: arrl_rac_sections.md
+    - name: Other Entity Classes
+      href: other_entity_classes.md
+    - name: Award Tracking
+      href: award_tracking.md
+    - name: Ionospheric Maps
+      href: ionospheric_maps.md
+    - name: Propagation Prediction
+      href: propagation_prediction.md
+    - name: Pre-computing Propagation
+      href: precompute_propagation.md
+    - name: Reading the Maps for DX'ing
+      href: reading_the_maps.md
+  - name: How To
+    items:
+    - name: Create a Custom Layer
+      href: create_custom_layer.md

@@ -1,0 +1,93 @@
+END-USER LICENCE AGREEMENT
+
+Please read this End-User Licence Agreement ("Agreement") carefully before accepting it, downloading, installing or using DX Atlas Pro ("Software").
+
+By selecting "I accept the agreement" in the setup program, or by downloading, installing or using the Software, you are agreeing to be bound by the terms and conditions of this Agreement.
+
+If you do not agree to the terms of this Agreement, do not accept it and do not download, install or use the Software.
+
+
+Licence
+
+Alex Shovkoplyas, VE3NEA ("Author") grants you a revocable, non-exclusive, non-transferable, limited licence to download, install and use the Software strictly in accordance with the terms of this Agreement.
+
+
+Shareware
+
+The Software is shareware. You may install it and use it free of charge for an evaluation period of 30 days ("Trial"). During the Trial no function of the Software is disabled or limited; the length of the Trial is its only limitation. To continue using the Software after the Trial ends, you must purchase a registration key. When the Trial ends, the Software stops working until a registration key is entered.
+
+A beta version of the Software may be used free of charge until the expiry date stated in its release notes, after which it stops working.
+
+
+Registration Key
+
+A registration key is issued to one person, whose name it carries ("Licensee"), and may be used only by the Licensee, on any computer the Licensee uses. The Licensee may not publish, share, sell or otherwise disclose the registration key to any third party. The Author may revoke a registration key that has been disclosed in breach of this Agreement, or that was obtained by fraud or without payment, and the Software, or later versions of it, may then stop accepting that key.
+
+
+Restrictions
+
+You agree not to, and you will not permit others to:
+
+- sublicense, sell, rent, lease, assign, distribute, transmit, host, outsource or otherwise make the Software or a registration key available to any third party, except that you may copy and distribute the unmodified setup program of the Software free of charge;
+
+- modify or create derivative works of the Software or any parts thereof;
+
+- reverse engineer, decompile, translate, disassemble or otherwise attempt to (i) derive the source code or the underlying ideas, algorithms, structure or organization of any Software; or (ii) defeat, avoid, bypass, remove, deactivate, or otherwise circumvent any software protection mechanisms in the Software, including, without limitation, any such mechanism used to restrict or control the length of the Trial or the expiry of a beta version, except to the extent that applicable law expressly permits such activity despite this limitation.
+
+
+Third-Party Components and Data
+
+The Software includes third-party software components, maps and data, each provided under its own licence. Those licences, and the credits their owners require, are installed with the Software in its "licenses" folder. To the extent those licences grant you rights that this Agreement does not, those licences govern those rights; in all other respects, including the Warranty Disclaimer and Limitations of Liability, this Agreement applies to those components and data as part of the Software.
+
+
+Modifications to Software
+
+The Author reserves the right to modify, suspend or discontinue, temporarily or permanently, the Software or any service to which it connects, with or without notice and without liability to you.
+
+
+Third-Party Claims
+
+If a third party claims that the Software infringes its intellectual property rights, you will promptly notify the Author in writing of such a claim.
+
+
+Warranty Disclaimer
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS LICENSED "AS-IS", WITH ALL FAULTS. THE AUTHOR DOES NOT MAKE ANY WARRANTIES OR REPRESENTATIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, WITH RESPECT TO THE SOFTWARE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY, ACCURACY, QUALITY OF SERVICE OR RESULTS, AVAILABILITY, SATISFACTORY QUALITY, LACK OF VIRUSES, TITLE, FITNESS FOR A PARTICULAR USE OR NON-INFRINGEMENT. ANY STATEMENTS OR REPRESENTATIONS ABOUT THE SOFTWARE AND ITS FEATURES OR FUNCTIONALITY AND ANY COMMUNICATION WITH YOU IS FOR INFORMATION PURPOSES ONLY, AND DOES NOT CONSTITUTE A WARRANTY OR REPRESENTATION. WITHOUT LIMITING THE FOREGOING, THE AUTHOR EXPRESSLY DOES NOT WARRANT THAT THE CONTENT, OPERATION, OUTPUT OR IMPLEMENTATION OF THE SOFTWARE WILL: (I) MEET YOUR REQUIREMENTS; (II) BE UNINTERRUPTED, ERROR-FREE, ACCURATE, RELIABLE OR COMPLETE; (III) BE COMPATIBLE WITH YOUR COMPUTER OR NETWORK; OR (IV) RESULT IN THE AUTHOR OR ANY THIRD PARTY RESOLVING ANY PARTICULAR SUPPORT REQUEST OR FIXING ANY ERRORS, OR IN SUCH RESOLUTION MEETING YOUR REQUIREMENTS OR EXPECTATIONS. THE MAPS, BOUNDARIES, PROPAGATION PREDICTIONS AND OTHER DATA PRESENTED BY THE SOFTWARE ARE FOR INFORMATION ONLY AND ARE NOT WARRANTED TO BE ACCURATE OR CURRENT. YOU SHALL BEAR THE ENTIRE RISK AS TO THE QUALITY AND THE PERFORMANCE OF THE SOFTWARE.
+
+
+Limitations of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, UNDER NO CIRCUMSTANCES WILL THE AUTHOR OR THE AUTHOR'S SUPPLIERS, AGENTS OR LICENSORS BE LIABLE UNDER ANY THEORY OF LIABILITY (WHETHER IN CONTRACT, TORT, STATUTORY OR OTHERWISE) FOR ANY DAMAGES WHATSOEVER, INCLUDING, WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF MONEY, REVENUES, PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES (EVEN IF SUCH PARTIES WERE ADVISED OF, KNEW OF OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES), RESULTING FROM THIS AGREEMENT OR THE INSTALLATION, MAINTENANCE, PERFORMANCE, FAILURE OR INTERRUPTION OR USE OF THE SOFTWARE, HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY (INCLUDING, WITHOUT LIMITATION, NEGLIGENCE), EVEN IF THE AUTHOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IF, NOTWITHSTANDING THESE TERMS, THE AUTHOR OR ANY OF THE AUTHOR'S SUPPLIERS ARE FOUND TO BE LIABLE, THEIR LIABILITY TO YOU OR TO ANY THIRD PARTY IS LIMITED TO THE GREATER OF THE AMOUNT YOU PAID FOR THE REGISTRATION KEY AND ONE HUNDRED CANADIAN DOLLARS (CDN $100). THIS LIMITATION IS CUMULATIVE AND WILL NOT BE INCREASED BY THE EXISTENCE OF MORE THAN ONE INCIDENT OR CLAIM.
+
+
+Term and Termination
+
+This Agreement shall remain in effect until terminated by you or the Author. This Agreement will terminate immediately, without prior notice from the Author, in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the Software and all copies thereof from your computer. Upon termination of this Agreement, you shall cease all use of the Software and delete all copies of the Software from your computer.
+
+
+Severability
+
+If any provision of this Agreement is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+
+
+Amendments to this Agreement
+
+The Author may revise this Agreement at any time. A revised Agreement applies only to versions of the Software released after the revision, and is presented for acceptance by the setup program of those versions; the version of this Agreement you accepted continues to govern the versions of the Software you already installed.
+
+
+Governing Law
+
+This Agreement is governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein, without regard to conflict-of-law rules. Any dispute arising from this Agreement or the Software shall be brought in the courts of the Province of Ontario.
+
+
+Entire Agreement
+
+This Agreement, together with the third-party licences installed in the "licenses" folder of the Software, constitutes the entire agreement between you and the Author regarding the Software and supersedes any prior agreements or understandings regarding it.
+
+
+Contact Information
+
+If you have any questions about this Agreement, please contact the Author at the email address shown on the DX Atlas Pro website, https://ve3nea.github.io/DxAtlasPro/
+
+
+Last updated 2026-10-15

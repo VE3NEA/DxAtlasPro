@@ -1,0 +1,15 @@
+pdf: false
+name: DX Atlas Pro Website
+items:
+    - name: Download
+      href: download.md
+    - name: Gallery
+      href: gallery.md
+    - name: User's Guide
+      href: users_guide/
+    - name: Developer's Guide
+      href: developers_guide/
+    - name: Credits
+      href: credits.md
+    - name: Register
+      href: register.md

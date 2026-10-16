@@ -1,0 +1,60 @@
+/* the navbar logo, images/dxatlaspro_icon.png, is 256 x 256 pixels; shown at the navbar height */
+#logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5em;
+}
+
+/* the program icon at the top of a page, users_guide/overview.md, with space above and below */
+.page-icon {
+  margin: 1.5em 0;
+}
+
+/* the gallery page, gallery.md: the World Atlas and Amateur Radio columns side by side, centred in
+   the page, and one under the other on a narrow screen */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em 3em;
+}
+
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+}
+
+.gallery-column h2 {
+  align-self: stretch;
+  text-align: center;
+}
+
+.gallery-column figure {
+  margin: 0 0 1.5em;
+  text-align: center;
+}
+
+.gallery-column img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* a screenshot not taken yet, users_guide/*.md: a dashed box where the image will go, naming the
+   file in images/ and what it shows; replaced by the image when the screenshot is taken */
+.missing-screenshot {
+  margin: 1em 0;
+  padding: 2em 1em;
+  border: 2px dashed #d08000;
+  border-radius: 6px;
+  background: rgba(208, 128, 0, 0.08);
+  color: #d08000;
+  text-align: center;
+}
+
+/* the regular text of every page, in <article>: larger than the template's 1rem, the navbar and the
+   tables of contents left at theirs */
+article {
+  font-size: 1.125rem;
+}
