@@ -33,8 +33,7 @@
       "pdfFileName": "dxatlaspro_users_guide.pdf",
       "pdfTocPage": true,
       "pdfCoverPage": "users_guide/pdf_cover.html",
-      "_disableContribution": true,
-      "_googleAnalyticsTagId": "G-EBFBX51E8H"
+      "_disableContribution": true
     }
   }
 }
