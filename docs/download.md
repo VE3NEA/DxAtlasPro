@@ -7,7 +7,7 @@
 DX Atlas Pro v.0.9 Beta
 
 - Windows: [DxAtlasProSetup-v.0.9.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.0.9/DxAtlasProSetup-v.0.9.exe)
-- Linux x64: [DxAtlasPro-v.0.9-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.0.9/DxAtlasPro-v.0.9-linux-x64.tar.gz)
+- Linux x64: [DxAtlasPro-v.0.9-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.0.9/DxAtlasPro-v.0.9-linux-x64.tar.gz) (coming soon)
 
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
