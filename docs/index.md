@@ -4,6 +4,10 @@ _layout: landing
 
 <center>
 
+<div style="float: right; width: 64px">
+<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=xqxCgn181oxqvNBxet8vY7QAPpXEa0UvJwfh2-MMciU"></script>
+</div>
+
 # DX Atlas Pro v.0.9 Beta
 
 _Copyright &copy; 2026 Alex Shovkoplyas, VE3NEA_
@@ -43,7 +47,3 @@ See the [list of features](users_guide/overview.md#features) in the User's Guide
 ## Discussion Group
 
 - [DX Atlas Pro](https://groups.google.com/g/dx-atlas-pro) at Google Groups
-
-<div style="width: 300px; margin: auto">
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=xqxCgn181oxqvNBxet8vY7QAPpXEa0UvJwfh2-MMciU"></script>
-</div>
