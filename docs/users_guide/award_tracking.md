@@ -13,6 +13,7 @@ These layers keep lists:
 - **DXCC entities**, **WAE countries** and **WAS**;
 - **CQ zones**, **ITU zones (RSGB)** and **ITU zones (ARRL)**;
 - **IOTA groups**, **ARRL/RAC sections** and **FFMA grid squares**;
+- **WAP Antarctic bases**;
 - your own layers; see [Create a Custom Layer](create_custom_layer.md).
 
 ## Creating Lists

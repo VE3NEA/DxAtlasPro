@@ -39,7 +39,8 @@ The **Amateur Radio** button opens the list of the Amateur Radio layers of its m
 - **IOTA Groups** - see [IOTA](iota.md);
 - **ARRL Sections** - see [ARRL/RAC Sections](arrl_rac_sections.md);
 - **FFMA Grid Squares** - see [Other Entity Classes](other_entity_classes.md);
-- **VUCC Grid Squares** - see [VUCC Grid Squares](vucc_grid.md).
+- **VUCC Grid Squares** - see [VUCC Grid Squares](vucc_grid.md);
+- **WAP Antarctic Bases** - see [Other Entity Classes](other_entity_classes.md#wap-antarctic-bases).
 
 ## Two Sets of Checkboxes
 

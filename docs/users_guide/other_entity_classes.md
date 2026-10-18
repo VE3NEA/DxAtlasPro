@@ -8,3 +8,18 @@ locator, such as **CM79**. The layer is off by default.
 
 The **FFMA grid squares** layer of the [Lists Panel](lists_panel.md) lists the squares, and allows
 you to keep lists of the squares worked and confirmed on 6 metres; see [Award Tracking](award_tracking.md).
+
+## WAP Antarctic Bases
+
+**WAP Antarctic Bases** in the **Amateur Radio** menu shows the Antarctic bases and sites of the
+Worldwide Antarctic Program, each as a dot labelled with its WAP reference, such as **ARG-01**. The
+layer is off by default.
+
+Hover the mouse over a reference to see the base's name, its kind - base or site - and its area.
+
+The **WAP Antarctic bases** layer of the [Lists Panel](lists_panel.md) lists all 1,038 WAP
+references, including the event references, which have no position and are not shown on the map,
+and keeps lists of the references worked or confirmed; see [Award Tracking](award_tracking.md).
+
+*The WAP base and station list is used with the permission of Massimo Balsamo IK1GPG, of the
+Worldwide Antarctic Program.*

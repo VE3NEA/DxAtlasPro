@@ -4,13 +4,18 @@ _layout: landing
 
 <center>
 
-<div style="float: right; width: 64px">
+<div style="display: flex; align-items: center; justify-content: center; gap: 16px">
+<div style="width: 64px; flex-shrink: 0">
 <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=xqxCgn181oxqvNBxet8vY7QAPpXEa0UvJwfh2-MMciU"></script>
 </div>
+<div style="text-align: left">
 
 # DX Atlas Pro v.0.9 Beta
 
 _Copyright &copy; 2026 Alex Shovkoplyas, VE3NEA_
+
+</div>
+</div>
 
 ![email](images/email_me.png)
 
@@ -28,7 +33,7 @@ named views and the clock
 
 For Radio Amateurs: prefix search, DXCC entities and prefixes, CQ and ITU zones,
 <br>
-IOTA groups, VUCC and FFMA grid squares, award tracking, Great Circle paths,
+IOTA groups, VUCC and FFMA grid squares, WAP bases, award tracking, Great Circle paths,
 <br>
 ionospheric maps, auroral oval and propagation prediction
 

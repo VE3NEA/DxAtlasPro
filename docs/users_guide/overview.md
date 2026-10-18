@@ -10,7 +10,7 @@ map at any date and time.
 The program serves two audiences. With **Tools > Amateur Radio Functions** off, it is a
 general-purpose atlas, and none of the Ham Radio terms appear in its menus and lists. With the
 switch on, it becomes a tool for Radio Amateurs: DXCC entities and prefixes, prefix search, CQ
-and ITU zones, IOTA groups, grid squares, award tracking, Great Circle paths, ionospheric maps,
+and ITU zones, IOTA groups, grid squares, WAP Antarctic bases, award tracking, Great Circle paths, ionospheric maps,
 the auroral oval and HF propagation prediction.
 
 DX Atlas Pro is a new program. It is not an upgrade of DX Atlas, and
@@ -48,6 +48,7 @@ DX Atlas licences do not cover it; see [Register](https://ve3nea.github.io/DxAtl
 - CQ zones, and ITU zones in both the ARRL and the RSGB versions;
 - IOTA groups;
 - VUCC grid squares and FFMA squares;
+- WAP Antarctic bases;
 - award tracking: lists of the entities you worked or confirmed, per band or mode, shown in colour
   on the map;
 - Great Circle paths from your home location, short path and long path;
