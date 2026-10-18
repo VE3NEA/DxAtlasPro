@@ -6,7 +6,7 @@ _layout: landing
 
 <div style="display: flex; align-items: center; justify-content: center; gap: 16px">
 <div style="width: 64px; flex-shrink: 0">
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=xqxCgn181oxqvNBxet8vY7QAPpXEa0UvJwfh2-MMciU"></script>
+<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=dsyvQwFsGBZ-qp-hpKbLXR5ppXXrvZlOm3tGXrcHA-Y"></script>
 </div>
 <div style="text-align: left">
 
