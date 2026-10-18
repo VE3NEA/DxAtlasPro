@@ -67,8 +67,8 @@ DX Atlas Pro in the `licenses` folder.
   ARRL. For the DXCC programme and its rules, see [www.arrl.org/dxcc](https://www.arrl.org/dxcc).
 - IOTA groups and their bounding rectangles, used with the permission of the IOTA Committee.
   For the Islands on the Air programme and its rules, see [www.rsgbiota.org](https://www.rsgbiota.org/).
-- The Antarctic base and station list (WADA) of the Worldwide Antarctic Program's WAP-WACA
-  database, used with the permission of Massimo Balsamo IK1GPG.
+- The Antarctic base and station list of the Worldwide Antarctic Program, the WAP-WADA
+  Directory, used with the permission of Massimo Balsamo IK1GPG.
 - [IANA Time Zone Database](https://www.iana.org/time-zones) — public domain
 - [NOAA SWPC](https://www.swpc.noaa.gov/) aurora forecast — downloaded by the program, public domain
 

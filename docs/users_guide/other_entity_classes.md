@@ -15,10 +15,9 @@ you to keep lists of the squares worked and confirmed on 6 metres; see [Award Tr
 Worldwide Antarctic Program, each as a dot labelled with its WAP reference, such as **ARG-01**. The
 layer is off by default.
 
-Hover the mouse over a reference to see the base's name, its kind - base or site - and its area.
+Hover the mouse over a reference to see the base's name and its location.
 
-The **WAP Antarctic bases** layer of the [Lists Panel](lists_panel.md) lists all 1,038 WAP
-references, including the event references, which have no position and are not shown on the map,
+The **WAP Antarctic bases** layer of the [Lists Panel](lists_panel.md) lists the WAP references
 and keeps lists of the references worked or confirmed; see [Award Tracking](award_tracking.md).
 
 *The WAP base and station list is used with the permission of Massimo Balsamo IK1GPG, of the
