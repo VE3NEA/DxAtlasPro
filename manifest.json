@@ -23,6 +23,46 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "developers_guide/com_bridge.md",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/com_bridge.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "developers_guide/drawing.md",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/drawing.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "developers_guide/enabling_the_api.md",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/enabling_the_api.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "developers_guide/examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/examples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "developers_guide/overview.md",
       "output": {
         ".html": {
@@ -40,6 +80,16 @@
         },
         ".json": {
           "relative_path": "developers_guide/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "developers_guide/websocket_api.md",
+      "output": {
+        ".html": {
+          "relative_path": "developers_guide/websocket_api.html"
         }
       },
       "version": ""

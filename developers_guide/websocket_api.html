@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>The WebSocket API | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="The WebSocket API | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/developers_guide/websocket_api.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="the-websocket-api">The WebSocket API</h1>
+
+<h2 id="messages">Messages</h2>
+<p>The API is <a href="https://www.jsonrpc.org/specification">JSON-RPC 2.0</a> over a WebSocket at
+<code>ws://127.0.0.1:7373/</code> (see <a href="enabling_the_api.html">Enabling the API</a> for the port). Each message is
+one JSON text frame; binary frames close the connection.</p>
+<p>A <strong>request</strong> names a method, carries its parameters, if any, in <code>params</code>, and an <code>id</code>, a number or
+a string of your choice, which DX Atlas Pro returns with the answer:</p>
+<pre><code class="lang-json">→ {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;method&quot;: &quot;home.get&quot;}
+← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;result&quot;: {&quot;lat&quot;: 43.7, &quot;lon&quot;: -79.4}}
+</code></pre>
+<p>A method that has nothing to return answers <code>&quot;result&quot;: null</code>. A request without an <code>id</code> is a
+<em>notification</em>: it runs, but is not answered.</p>
+<p>Requests on one connection run in the order they are sent, each message completed before the next
+is read.</p>
+<h3 id="batches">Batches</h3>
+<p>An array of requests is a <strong>batch</strong>: all of its requests run together, before the map is drawn
+again, so a client that changes the view and draws its layers in one batch never shows the map
+half-updated. The answer is an array of the answers, in the order of the requests, leaving out the
+notifications:</p>
+<pre><code class="lang-json">→ [{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 5, &quot;method&quot;: &quot;home.get&quot;},
+   {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;window.bringToFront&quot;},
+   {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 6, &quot;method&quot;: &quot;app.info&quot;}]
+← [{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 5, &quot;result&quot;: {&quot;lat&quot;: 43.7, &quot;lon&quot;: -79.4}},
+   {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 6, &quot;result&quot;: {&quot;version&quot;: &quot;0.91.0&quot;, &quot;apiVersion&quot;: 1, &quot;maps&quot;: 2}}]
+</code></pre>
+<h3 id="errors">Errors</h3>
+<p>A request that fails is answered with an <code>error</code> in place of the <code>result</code>:</p>
+<pre><code class="lang-json">→ {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 2, &quot;method&quot;: &quot;map.set&quot;, &quot;params&quot;: {&quot;map&quot;: 3}}
+← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 2, &quot;error&quot;: {&quot;code&quot;: -32602, &quot;message&quot;: &quot;no map 3; maps are 1 and 2&quot;}}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-32700</td>
+<td>the message is not valid JSON</td>
+</tr>
+<tr>
+<td>-32600</td>
+<td>the message is not a valid JSON-RPC request</td>
+</tr>
+<tr>
+<td>-32601</td>
+<td>there is no such method</td>
+</tr>
+<tr>
+<td>-32602</td>
+<td>the parameters are wrong; the message says which and why</td>
+</tr>
+<tr>
+<td>-32603</td>
+<td>an internal error in DX Atlas Pro</td>
+</tr>
+<tr>
+<td>1</td>
+<td>no such layer or image</td>
+</tr>
+<tr>
+<td>2</td>
+<td>not possible now, such as saving the image of a map that is not shown</td>
+</tr>
+</tbody>
+</table>
+<p>Each request of a batch succeeds or fails on its own.</p>
+<h3 id="events">Events</h3>
+<p>DX Atlas Pro tells a client what happens on the map - clicks, mouse moves, changes made by the
+user - with <strong>events</strong>: notifications from DX Atlas Pro, which have a <code>method</code> and <code>params</code> but no
+<code>id</code>. Nothing is sent until the client subscribes to the events it wants; see
+<a href="#subscribing-to-events">Subscribing to Events</a>.</p>
+<pre><code class="lang-json">← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;map.clicked&quot;, &quot;params&quot;: {&quot;map&quot;: 1, &quot;lat&quot;: 51.5, &quot;lon&quot;: -0.1}}
+</code></pre>
+<h3 id="conventions">Conventions</h3>
+<ul>
+<li><strong>Maps</strong> - DX Atlas Pro has two map panels, numbered 1 and 2. A method that acts on a map takes
+an optional <code>&quot;map&quot;: 1</code> or <code>&quot;map&quot;: 2</code>, map 1 when it is left out.</li>
+<li><strong>Coordinates</strong> - in degrees, latitude positive north and longitude positive east. As named
+fields they are <code>lat</code> and <code>lon</code>; as arrays, as in GeoJSON, <code>[lon, lat]</code>.</li>
+<li><strong>Zoom</strong> - in kilometres per pixel at the centre of the map, <code>kmPerPixel</code>, a number that means
+the same on all three projections and at any window size.</li>
+<li><strong>Colours</strong> - <code>#RRGGBB</code>, or <code>#AARRGGBB</code> with an alpha, <code>00</code> for transparent and <code>FF</code> for opaque.</li>
+<li><strong>Times</strong> - ISO 8601, in UTC, such as <code>&quot;2026-10-19T15:43:22Z&quot;</code>.</li>
+<li><strong>Names</strong> - the API's own objects use camelCase names, such as <code>centerLat</code>; the settings and the
+colours, which are DX Atlas Pro's files, keep the names those files use, such as <code>Home</code>. Names
+are read regardless of case.</li>
+</ul>
+<h2 id="getting-and-setting-state">Getting and Setting State</h2>
+<p>The state of DX Atlas Pro is read and changed in blocks - the window, a map, the clock, the home
+location, the settings and the colours - each with a <code>get</code> method, which returns the whole block,
+and a <code>set</code> method, which takes any part of it:</p>
+<pre><code class="lang-json">→ {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 3, &quot;method&quot;: &quot;map.set&quot;, &quot;params&quot;: {&quot;projection&quot;: &quot;azimuthal&quot;, &quot;kmPerPixel&quot;: 20}}
+← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 3, &quot;result&quot;: null}
+</code></pre>
+<p>A <code>set</code> changes only the fields it is given and leaves the others as they are. These changes are
+the user's own: they stay after the client disconnects, as if the user had made them.</p>
+<h3 id="appinfo">app.info</h3>
+<p>Returns the version of DX Atlas Pro, the version of the API, and the number of maps:</p>
+<pre><code class="lang-json">{&quot;version&quot;: &quot;0.91.0&quot;, &quot;apiVersion&quot;: 1, &quot;maps&quot;: 2}
+</code></pre>
+<p><code>apiVersion</code> grows when the API changes in a way that a client must know of.</p>
+<h3 id="windowget-windowset">window.get, window.set</h3>
+<p>The main window:</p>
+<pre><code class="lang-json">{
+  &quot;left&quot;: 1112, &quot;top&quot;: 561, &quot;width&quot;: 1600, &quot;height&quot;: 950,
+  &quot;visible&quot;: true,
+  &quot;toolbar&quot;: true,
+  &quot;lists&quot;: {&quot;visible&quot;: true, &quot;kind&quot;: &quot;dxcc&quot;, &quot;width&quot;: 347}
+}
+</code></pre>
+<ul>
+<li><code>left</code>, <code>top</code> - the window's position on the screen, in screen pixels;</li>
+<li><code>width</code>, <code>height</code> - its size, in device-independent pixels;</li>
+<li><code>visible</code> - <code>false</code> hides the window, <code>true</code> shows it;</li>
+<li><code>toolbar</code> - whether the toolbars above the maps are shown;</li>
+<li><code>lists</code> - the Lists panel: whether it is shown, the layer it lists, by the id of that layer, such
+as <code>dxcc</code>, <code>cities</code> or <code>pins</code>, and its width, which is read only.</li>
+</ul>
+<h3 id="windowbringtofront">window.bringToFront</h3>
+<p>Shows the main window if it is hidden or minimized and brings it to the front.</p>
+<h3 id="mapget-mapset">map.get, map.set</h3>
+<p>One map's view and switches; <code>map.get</code> takes <code>{&quot;map&quot;: 2}</code> for the second map.</p>
+<pre><code class="lang-json">{
+  &quot;map&quot;: 1,
+  &quot;width&quot;: 1245, &quot;height&quot;: 823,
+  &quot;projection&quot;: &quot;rectangular&quot;,
+  &quot;centerLat&quot;: 0, &quot;centerLon&quot;: 0,
+  &quot;kmPerPixel&quot;: 32.15,
+  &quot;landRelief&quot;: true,
+  &quot;oceanRelief&quot;: true,
+  &quot;dimmed&quot;: false,
+  &quot;toggles&quot;: {
+    &quot;Overlays&quot;: {&quot;graticule&quot;: false, &quot;gray_line&quot;: false, &quot;cq_zones&quot;: true, ...},
+    &quot;Labels&quot;: {&quot;countries&quot;: true, &quot;cities&quot;: true, ...},
+    &quot;IonoMap&quot;: &quot;None&quot;,
+    &quot;MagDip&quot;: false,
+    &quot;Aurora&quot;: false
+  },
+  &quot;dx&quot;: {&quot;lat&quot;: 0, &quot;lon&quot;: 0, &quot;visible&quot;: false},
+  &quot;mouseMode&quot;: &quot;app&quot;
+}
+</code></pre>
+<ul>
+<li><code>width</code>, <code>height</code> - the map's size in device-independent pixels, read only;</li>
+<li><code>projection</code> - <code>rectangular</code>, <code>azimuthal</code> or <code>globe</code>. A switch to the azimuthal projection
+centres the map on the home location, as the Projection button does, unless the same <code>map.set</code>
+gives a centre;</li>
+<li><code>centerLat</code>, <code>centerLon</code> - the centre of the map;</li>
+<li><code>kmPerPixel</code> - the zoom, which DX Atlas Pro keeps within its zoom limits; null, and not settable,
+while the map is not shown;</li>
+<li><code>landRelief</code>, <code>oceanRelief</code> - the Layers button's <strong>Land Relief</strong> and <strong>Ocean Relief</strong>;</li>
+<li><code>dimmed</code> - draws the map darker, under the lines and labels, so that a client's drawing stands
+out;</li>
+<li><code>toggles</code> - the switches of the map toolbar's menus, below; <code>map.set</code> changes only the keys it
+is given;</li>
+<li><code>dx</code> - a DX station marker, a red antenna, drawn at <code>lat</code>, <code>lon</code> while <code>visible</code>;</li>
+<li><code>mouseMode</code> - <code>app</code>, where a click on the map does what the user's settings say, or <code>client</code>,
+where it does nothing but send the <code>map.clicked</code> event, so the click is left to your program.</li>
+</ul>
+<p><code>toggles.Overlays</code>, by key:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Menu item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>home</code></td>
+<td>Layers &gt; Home</td>
+</tr>
+<tr>
+<td><code>lakes</code>, <code>rivers_lake_centerlines_scale_rank</code>, <code>antarctic_ice_shelves_polys</code>, <code>urban_areas</code></td>
+<td>Layers &gt; Lakes, Rivers, Ice Shelves, Urban Areas</td>
+</tr>
+<tr>
+<td><code>political_boundaries</code></td>
+<td>Lines &gt; Political Boundaries</td>
+</tr>
+<tr>
+<td><code>graticule</code>, <code>azimuth_distance</code>, <code>time_zones</code>, <code>gray_line</code>, <code>geographic_lines</code></td>
+<td>Lines &gt; Graticule, Azimuth/Distance, Time Zones, Gray Line, Date Line</td>
+</tr>
+<tr>
+<td><code>dxcc_entities</code>, <code>admin_1_call_areas</code>, <code>admin_1_provinces</code></td>
+<td>Amateur Radio &gt; DXCC Entities, Call Areas, Provinces</td>
+</tr>
+<tr>
+<td><code>cq_zones</code>, <code>itu_rsgb_zones</code>, <code>itu_arrl_zones</code></td>
+<td>Amateur Radio &gt; CQ Zones, ITU Zones (RSGB), ITU Zones (ARRL)</td>
+</tr>
+<tr>
+<td><code>sections</code>, <code>ffma_squares</code>, <code>vucc_grid</code></td>
+<td>Amateur Radio &gt; ARRL Sections, FFMA Grid Squares, VUCC Grid Squares</td>
+</tr>
+</tbody>
+</table>
+<p><code>toggles.Labels</code>, by key:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Menu item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>countries</code>, <code>islands</code>, <code>cities</code>, <code>seas</code>, <code>lakes_rivers</code>, <code>mountains</code>, <code>regions</code></td>
+<td>Labels &gt; Countries, Islands, Cities, Seas, Lakes and Rivers, Mountains, Physical Features</td>
+</tr>
+<tr>
+<td><code>wae_prefixes</code>, <code>iota</code>, <code>wap</code></td>
+<td>Amateur Radio &gt; WAE Entities, IOTA Groups, WAP Antarctic Bases</td>
+</tr>
+</tbody>
+</table>
+<p><code>toggles.IonoMap</code> is the Ionosphere button's map - <code>None</code>, <code>FoF2</code>, <code>Muf3000</code>, <code>HmF2</code>, <code>FoE</code>, <code>NmD</code>
+or <code>Propagation</code> - and <code>MagDip</code> and <code>Aurora</code> its Magnetic Dip and Aurora Oval switches. The
+Amateur Radio toggles and the ionospheric ones take effect only while <strong>Tools &gt; Amateur Radio
+Functions</strong> is on; otherwise they are ignored.</p>
+<h3 id="mapshowaim">map.showAim</h3>
+<p><code>{&quot;map&quot;: 1, &quot;lat&quot;: 55.8, &quot;lon&quot;: 37.6}</code> - draws a crosshair at the point, centring the map on it,
+or, on the azimuthal map, zooming out to the whole world. The crosshair stays until the user moves
+the map.</p>
+<h3 id="mapsaveimage">map.saveImage</h3>
+<p><code>{&quot;map&quot;: 1}</code> - returns the map as it is drawn on the screen, after its next frame, as a PNG in
+screen pixels, base64-encoded:</p>
+<pre><code class="lang-json">{&quot;png&quot;: &quot;iVBORw0KGgoAAAANSUhEUgAABN0AAAM3...&quot;}
+</code></pre>
+<p>A map that is not shown has no image, and fails with error 2. The image is a few megabytes, larger
+than some WebSocket libraries accept by default: in Python's <code>websockets</code>, connect with
+<code>max_size=None</code>.</p>
+<h3 id="clockget-clockset">clock.get, clock.set</h3>
+<p>The Clock panel:</p>
+<pre><code class="lang-json">{&quot;visible&quot;: false, &quot;utc&quot;: true, &quot;fixed&quot;: false, &quot;time&quot;: &quot;2026-10-19T15:43:22.565Z&quot;}
+</code></pre>
+<ul>
+<li><code>visible</code> - whether the Clock panel is shown;</li>
+<li><code>utc</code> - whether it shows UTC rather than local time;</li>
+<li><code>fixed</code> - whether the clock is stopped at <code>time</code>, rather than live;</li>
+<li><code>time</code> - the time the maps show: the gray line, the sun, the ionospheric and propagation maps.
+Setting it fixes the clock at that time; <code>{&quot;fixed&quot;: false}</code> makes it live again.</li>
+</ul>
+<h3 id="homeget-homeset">home.get, home.set</h3>
+<p>The home location, <code>{&quot;lat&quot;: 43.7, &quot;lon&quot;: -79.4}</code>, as in <strong>Tools &gt; Settings</strong>, <em>Home Location</em>.</p>
+<h3 id="settingsget-settingsset">settings.get, settings.set</h3>
+<p>DX Atlas Pro's settings as its <code>Settings.json</code> file holds them, with the window, the maps and the
+panel layout as they are at the moment. <code>settings.set</code> takes the whole document or any part of it,
+applies it as the Settings dialog's OK does, and saves it to the file:</p>
+<pre><code class="lang-json">{&quot;Units&quot;: {&quot;Distance&quot;: &quot;Miles&quot;}}
+</code></pre>
+<p>The <em>Ionosphere</em> section is ignored: only the Ionospheric Parameters dialog sets it. A change to
+<code>Api.Port</code> closes the connection on which it was made.</p>
+<h3 id="colorsget-colorsset">colors.get, colors.set</h3>
+<p>The colours of the map as <strong>Tools &gt; Colors</strong> sets them, the document DX Atlas Pro keeps in its
+<code>Colors.json</code> file. <code>colors.set</code> takes the whole document or any part of it, and redraws both maps:</p>
+<pre><code class="lang-json">{&quot;Lines&quot;: {&quot;Graticule&quot;: {&quot;Color&quot;: &quot;#FF0000&quot;, &quot;Width&quot;: 1}}}
+</code></pre>
+<p>The colours are kept until DX Atlas Pro closes, then the user's own come back; with
+<code>&quot;persist&quot;: true</code> beside the colours, they are saved to <code>Colors.json</code> and replace the user's.</p>
+<h2 id="subscribing-to-events">Subscribing to Events</h2>
+<h3 id="eventssubscribe">events.subscribe</h3>
+<p><code>{&quot;names&quot;: [&quot;map.clicked&quot;, &quot;feature.clicked&quot;]}</code> - the events this connection is sent from now on,
+replacing those of any earlier <code>events.subscribe</code>; an empty list stops them all.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Params</th>
+<th>Sent when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>map.clicked</code></td>
+<td><code>{map, lat, lon}</code></td>
+<td>the user clicks a map, on a feature or not</td>
+</tr>
+<tr>
+<td><code>mouse.moved</code></td>
+<td><code>{map, lat, lon}</code></td>
+<td>the mouse moves over a map by more than a pixel, at most 5 times a second</td>
+</tr>
+<tr>
+<td><code>map.changed</code></td>
+<td><code>{map, kind}</code></td>
+<td>the user or a client changes the map, <code>kind</code> saying what - see below</td>
+</tr>
+<tr>
+<td><code>clock.changed</code></td>
+<td>none</td>
+<td>the clock's mode or fixed time changes, but not as a live clock ticks</td>
+</tr>
+<tr>
+<td><code>window.changed</code></td>
+<td>none</td>
+<td>the main window is moved or resized</td>
+</tr>
+<tr>
+<td><code>panels.changed</code></td>
+<td>none</td>
+<td>a panel is shown or hidden</td>
+</tr>
+<tr>
+<td><code>app.exitRequest</code></td>
+<td>none</td>
+<td>DX Atlas Pro is closing; the connection closes next</td>
+</tr>
+<tr>
+<td><code>feature.clicked</code></td>
+<td><code>{map, layer, id, lat, lon}</code></td>
+<td>the user clicks a clickable feature of this client's layers; see <a href="drawing.html#hints-and-clicks">Drawing on the Map</a></td>
+</tr>
+<tr>
+<td><code>feature.hovered</code></td>
+<td><code>{map, layer, id, lat, lon}</code></td>
+<td>the mouse comes onto a feature of this client's layers</td>
+</tr>
+</tbody>
+</table>
+<p><code>map.changed</code>'s <code>kind</code> is <code>view</code> (moved or zoomed), <code>projection</code>, <code>labels</code>, <code>grid</code> (the
+graticule), <code>relief</code>, <code>grayline</code>, <code>layers</code> (another toggle), <code>mousemode</code>, <code>pins</code> or <code>iono</code> (the
+ionospheric map).</p>
+<h2 id="methods-at-a-glance">Methods at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Params</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app.info</code></td>
+<td></td>
+<td><code>{version, apiVersion, maps}</code></td>
+</tr>
+<tr>
+<td><code>window.get</code>, <code>window.set</code></td>
+<td>the window</td>
+<td></td>
+</tr>
+<tr>
+<td><code>window.bringToFront</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>map.get</code>, <code>map.set</code></td>
+<td>a map</td>
+<td></td>
+</tr>
+<tr>
+<td><code>map.showAim</code></td>
+<td><code>{map, lat, lon}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>map.saveImage</code></td>
+<td><code>{map}</code></td>
+<td><code>{png}</code></td>
+</tr>
+<tr>
+<td><code>map.fit</code></td>
+<td><code>{map, bounds}</code> or <code>{map, layer}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>map.plotField</code></td>
+<td><code>{map, values}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>clock.get</code>, <code>clock.set</code></td>
+<td>the clock</td>
+<td></td>
+</tr>
+<tr>
+<td><code>home.get</code>, <code>home.set</code></td>
+<td><code>{lat, lon}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>settings.get</code>, <code>settings.set</code></td>
+<td>the settings</td>
+<td></td>
+</tr>
+<tr>
+<td><code>colors.get</code>, <code>colors.set</code></td>
+<td>the colours, and <code>persist</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>events.subscribe</code></td>
+<td><code>{names}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.add</code></td>
+<td><code>{map, style, visible}</code></td>
+<td><code>{layer}</code></td>
+</tr>
+<tr>
+<td><code>layers.set</code></td>
+<td><code>{layer, style, visible, features, above}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.upsert</code></td>
+<td><code>{layer, features}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.delete</code></td>
+<td><code>{layer, ids}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.remove</code></td>
+<td><code>{layer}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.clear</code></td>
+<td><code>{map}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.hint</code></td>
+<td><code>{layer, id, hint, clickable}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>layers.addField</code></td>
+<td><code>{map, lat0, lon0, dLat, dLon, rows, cols, values, palette, bands, above}</code></td>
+<td><code>{layer}</code></td>
+</tr>
+<tr>
+<td><code>images.add</code></td>
+<td><code>{name, png, cellWidth, hotSpotX, hotSpotY}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>images.remove</code></td>
+<td><code>{name}</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><code>map.fit</code>, <code>map.plotField</code> and the <code>layers</code> and <code>images</code> methods are described in
+<a href="drawing.html">Drawing on the Map</a>.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

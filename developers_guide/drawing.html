@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Drawing on the Map | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Drawing on the Map | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/developers_guide/drawing.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="drawing-on-the-map">Drawing on the Map</h1>
+
+<p>A client draws on a map in <strong>custom layers</strong> of <a href="https://geojson.org/">GeoJSON</a> features - points,
+lines and polygons, with labels, icons and tooltips - and in <strong>fields</strong>, grids of values drawn as
+coloured bands, such as a propagation map of its own.</p>
+<h2 id="custom-layers">Custom Layers</h2>
+<p><code>layers.add</code> makes an empty layer on a map and returns its number, which the other <code>layers</code>
+methods take:</p>
+<pre><code class="lang-json">→ {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;method&quot;: &quot;layers.add&quot;, &quot;params&quot;: {&quot;map&quot;: 1, &quot;style&quot;: {&quot;Line&quot;: {&quot;Color&quot;: &quot;#FF0000&quot;, &quot;Width&quot;: 2}}}}
+← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 1, &quot;result&quot;: {&quot;layer&quot;: 7}}
+→ {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 2, &quot;method&quot;: &quot;layers.set&quot;, &quot;params&quot;: {&quot;layer&quot;: 7, &quot;features&quot;: [
+    {&quot;type&quot;: &quot;Feature&quot;, &quot;id&quot;: &quot;path&quot;, &quot;geometry&quot;: {&quot;type&quot;: &quot;LineString&quot;, &quot;coordinates&quot;: [[-79.4, 43.7], [37.6, 55.8]]}}]}}
+← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;id&quot;: 2, &quot;result&quot;: null}
+</code></pre>
+<p>A layer belongs to the connection that made it: no other client sees or changes it, and it is
+removed when its connection closes, so a client that exits or crashes leaves nothing behind on the
+map. The layers of all clients are drawn over the map's own lines and under its labels, in the
+order they were made; their symbols, icons and labels go over the map's labels.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Params</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layers.add</code></td>
+<td><code>{map, style, visible}</code></td>
+<td>makes a layer, map 1 and visible unless told otherwise, and returns <code>{layer}</code></td>
+</tr>
+<tr>
+<td><code>layers.set</code></td>
+<td><code>{layer, style, visible, features, above}</code></td>
+<td>changes what it is given: <code>style</code> merges onto the layer's, <code>features</code> replace all of the layer's, <code>above</code> is the <a href="#z-order">z-order</a></td>
+</tr>
+<tr>
+<td><code>layers.upsert</code></td>
+<td><code>{layer, features}</code></td>
+<td>adds the features, replacing those whose <code>id</code> the layer has, in their place</td>
+</tr>
+<tr>
+<td><code>layers.delete</code></td>
+<td><code>{layer, ids}</code></td>
+<td>removes the features with these ids; an id the layer lacks is ignored</td>
+</tr>
+<tr>
+<td><code>layers.remove</code></td>
+<td><code>{layer}</code></td>
+<td>removes the layer</td>
+</tr>
+<tr>
+<td><code>layers.clear</code></td>
+<td><code>{map}</code></td>
+<td>removes all of this connection's layers on the map</td>
+</tr>
+</tbody>
+</table>
+<p>A layer this connection did not make, or one already removed, is error 1.</p>
+<h2 id="features">Features</h2>
+<p><code>features</code> is a GeoJSON <code>FeatureCollection</code>, or a plain array of <code>Feature</code>s. A feature's geometry
+is a <code>Point</code>, <code>LineString</code> or <code>Polygon</code>, a <code>MultiPoint</code>, <code>MultiLineString</code> or <code>MultiPolygon</code>, or a
+<code>GeometryCollection</code> of these; positions are <code>[lon, lat]</code> in degrees. Each line or polygon edge
+between two positions is drawn along the great circle, the shortest path on the globe, so a
+two-point line is a great circle path, and edges are cut cleanly at the date line and round the
+poles.</p>
+<p>A feature's <code>id</code>, a string or a number, names it to <code>layers.upsert</code>, <code>layers.delete</code> and the
+events. A feature may have none, but then it can only be replaced with the whole layer, and its
+events carry <code>&quot;id&quot;: null</code>.</p>
+<p>DX Atlas Pro reads these of a feature's <code>properties</code>, and ignores any others:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>label</code></td>
+<td>text</td>
+<td>drawn at each point of the feature, in the layer's <code>Label</code> style</td>
+</tr>
+<tr>
+<td><code>glyph</code></td>
+<td>number</td>
+<td>the icon of the layer's image strip drawn at the point, counting from 0; see <a href="#icons">Icons</a></td>
+</tr>
+<tr>
+<td><code>hint</code></td>
+<td>text</td>
+<td>a tooltip shown while the mouse is on the feature</td>
+</tr>
+<tr>
+<td><code>clickable</code></td>
+<td><code>true</code></td>
+<td>a click on the feature sends <code>feature.clicked</code>; see <a href="#hints-and-clicks">Hints and Clicks</a></td>
+</tr>
+<tr>
+<td><code>style</code></td>
+<td>a style</td>
+<td>this feature's style, merged onto the layer's</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td><code>&quot;long&quot;</code></td>
+<td>a two-point <code>LineString</code> drawn the long way round the great circle</td>
+</tr>
+<tr>
+<td><code>ttl</code></td>
+<td>seconds</td>
+<td>the feature is removed by DX Atlas Pro this many seconds after it was sent</td>
+</tr>
+</tbody>
+</table>
+<p>A feature with its own <code>style</code> can share a layer with others, so one layer of spots can have a
+colour per band. <code>ttl</code> suits spots, which can be sent and forgotten: DX Atlas Pro removes each one
+when it expires, checking once a second.</p>
+<pre><code class="lang-json">{
+  &quot;type&quot;: &quot;Feature&quot;,
+  &quot;id&quot;: &quot;JA1ABC&quot;,
+  &quot;geometry&quot;: {&quot;type&quot;: &quot;Point&quot;, &quot;coordinates&quot;: [139.7, 35.7]},
+  &quot;properties&quot;: {
+    &quot;label&quot;: &quot;JA1ABC&quot;,
+    &quot;hint&quot;: &quot;JA1ABC on 20m&quot;,
+    &quot;clickable&quot;: true,
+    &quot;ttl&quot;: 600,
+    &quot;style&quot;: {&quot;Symbol&quot;: {&quot;Color&quot;: &quot;#FF4040&quot;}, &quot;Label&quot;: {&quot;Color&quot;: &quot;#FF4040&quot;}}
+  }
+}
+</code></pre>
+<h2 id="styles">Styles</h2>
+<p>A layer's style has four parts, each optional, and each field of a part optional. <code>layers.add</code>
+starts from the defaults below, and <code>layers.set</code> merges a new style onto the layer's:</p>
+<pre><code class="lang-json">{
+  &quot;Line&quot;:   {&quot;Color&quot;: &quot;#FF0000&quot;, &quot;Width&quot;: 2},
+  &quot;Area&quot;:   {&quot;Fill&quot;: &quot;#40FF0000&quot;, &quot;Line&quot;: &quot;#FF0000&quot;, &quot;Width&quot;: 1},
+  &quot;Label&quot;:  {&quot;Color&quot;: &quot;#FFFFFF&quot;, &quot;HaloColor&quot;: &quot;#000000&quot;, &quot;Size&quot;: 12, &quot;Bold&quot;: false, &quot;Italic&quot;: false, &quot;Font&quot;: &quot;&quot;, &quot;Offset&quot;: true},
+  &quot;Symbol&quot;: {&quot;Shape&quot;: &quot;circle&quot;, &quot;Image&quot;: null, &quot;Color&quot;: &quot;#FFFF00&quot;, &quot;Size&quot;: 6}
+}
+</code></pre>
+<ul>
+<li><code>Line</code> - lines: their colour and width in pixels;</li>
+<li><code>Area</code> - polygons: the fill, and the outline's colour and width;</li>
+<li><code>Label</code> - the text of the <code>label</code> property: its colour, the colour of the halo round it, which a
+transparent colour such as <code>#00000000</code> turns off, its size in pixels, bold and italic, and its
+font, the system's default when empty. With <code>Offset</code>, the label is drawn beside its point, to the
+right of the symbol; without it, centred on the point;</li>
+<li><code>Symbol</code> - what marks a point: a <code>Shape</code>, <code>circle</code>, <code>square</code>, <code>triangle</code>, <code>diamond</code>, <code>cross</code> or
+<code>none</code>, in a <code>Color</code>, <code>Size</code> pixels across; or, when <code>Image</code> names an image strip, the icon the
+feature's <code>glyph</code> picks.</li>
+</ul>
+<p><code>Line</code>, <code>Area</code> and <code>Label</code> are the same objects, with the same names, as the line, area and label
+colours of <code>Colors.json</code> and of the <code>colors.get</code> method, so a look copied from one works in the
+other.</p>
+<h2 id="icons">Icons</h2>
+<p><code>images.add</code> sends a PNG of one icon, or of a strip of icons side by side, each <code>cellWidth</code> pixels
+wide, under a name; a layer whose <code>Symbol.Image</code> names it draws, at each point, the icon that the
+feature's <code>glyph</code> property picks, counting from 0:</p>
+<pre><code class="lang-json">{&quot;name&quot;: &quot;bands&quot;, &quot;png&quot;: &quot;iVBORw0KGgo...&quot;, &quot;cellWidth&quot;: 16, &quot;hotSpotX&quot;: 8, &quot;hotSpotY&quot;: 8}
+</code></pre>
+<ul>
+<li><code>png</code> - the image, base64-encoded;</li>
+<li><code>cellWidth</code> - the width of one icon; the whole image is one icon when it is left out;</li>
+<li><code>hotSpotX</code>, <code>hotSpotY</code> - the pixel of the icon, from its top-left corner, that is placed on the
+point; the top-left corner itself when left out.</li>
+</ul>
+<p>An image belongs to the connection that sent it, as a layer does; sending the same name again
+replaces it, and <code>images.remove</code> with <code>{&quot;name&quot;: ...}</code> removes it.</p>
+<h2 id="hints-and-clicks">Hints and Clicks</h2>
+<p>A feature with a <code>hint</code> shows it as a tooltip while the mouse is on it. A client whose hints change,
+or are costly to make, can give them when they are needed instead: subscribed to
+<code>feature.hovered</code>, it is told each time the mouse comes onto one of its features, and answers with
+<code>layers.hint</code> within 250 ms:</p>
+<pre><code class="lang-json">← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;feature.hovered&quot;, &quot;params&quot;: {&quot;map&quot;: 1, &quot;layer&quot;: 7, &quot;id&quot;: &quot;JA1ABC&quot;, &quot;lat&quot;: 35.7, &quot;lon&quot;: 139.7}}
+→ {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;layers.hint&quot;, &quot;params&quot;: {&quot;layer&quot;: 7, &quot;id&quot;: &quot;JA1ABC&quot;, &quot;hint&quot;: &quot;JA1ABC, 14.025 MHz, 2 min ago&quot;, &quot;clickable&quot;: true}}
+</code></pre>
+<p>DX Atlas Pro shows the hint if the answer comes in time and the mouse is still on the feature, and
+<code>&quot;clickable&quot;: true</code> makes the feature clickable while the mouse stays on it.</p>
+<p>A click on a clickable feature - one with <code>&quot;clickable&quot;: true</code> in its properties, or made clickable
+by <code>layers.hint</code> - sends <code>feature.clicked</code> to a client subscribed to it, after the <code>map.clicked</code>
+that every click sends, and does nothing else in DX Atlas Pro, so the client decides what the click
+does:</p>
+<pre><code class="lang-json">← {&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;feature.clicked&quot;, &quot;params&quot;: {&quot;map&quot;: 1, &quot;layer&quot;: 7, &quot;id&quot;: &quot;JA1ABC&quot;, &quot;lat&quot;: 35.7, &quot;lon&quot;: 139.7}}
+</code></pre>
+<p>Where features overlap, the newest layer's feature is the one under the mouse; within a layer, a
+symbol, icon or label comes first, then a line within 4 pixels, then a polygon.</p>
+<h2 id="z-order">Z-Order</h2>
+<p><code>layers.set</code> with <code>above</code> moves a layer among the map's own drawing:</p>
+<ul>
+<li><code>relief</code> - over the land and sea, under every line, so the map's borders and zones show through
+a field or a filled area;</li>
+<li><code>overlays</code> - over the borders, zones and other lines;</li>
+<li><code>grayline</code> - over the gray line too, the default;</li>
+<li><code>labels</code> - over the map's labels as well.</li>
+</ul>
+<p>Layers with the same <code>above</code> are drawn in the order they were made.</p>
+<h2 id="fields">Fields</h2>
+<p><code>layers.addField</code> draws a grid of values - a prediction, a measurement, any quantity over an area -
+as coloured bands, as DX Atlas Pro draws its own ionospheric maps, and returns a layer that
+<code>layers.remove</code> removes:</p>
+<pre><code class="lang-json">{
+  &quot;map&quot;: 1,
+  &quot;lat0&quot;: 30, &quot;lon0&quot;: -20, &quot;dLat&quot;: 1, &quot;dLon&quot;: 1, &quot;rows&quot;: 41, &quot;cols&quot;: 71,
+  &quot;values&quot;: [0, 0.1, 0.3, ...],
+  &quot;palette&quot;: [
+    {&quot;value&quot;: 2, &quot;color&quot;: &quot;#604080FF&quot;},
+    {&quot;value&quot;: 5, &quot;color&quot;: &quot;#6040C040&quot;},
+    {&quot;value&quot;: 8, &quot;color&quot;: &quot;#80FF4040&quot;}
+  ],
+  &quot;bands&quot;: true,
+  &quot;above&quot;: &quot;relief&quot;
+}
+</code></pre>
+<ul>
+<li><code>lat0</code>, <code>lon0</code> - the position of the first value, in degrees;</li>
+<li><code>dLat</code>, <code>dLon</code> - the steps between rows and between columns, in degrees;</li>
+<li><code>rows</code>, <code>cols</code> - the size of the grid, at least 2 by 2;</li>
+<li><code>values</code> - <code>rows</code> times <code>cols</code> numbers, row by row: the first row at <code>lat0</code>, from <code>lon0</code> east;</li>
+<li><code>palette</code> - 1 to 16 values, each with the colour of the band from that value up to the next; the
+map is clear below the first value and outside the grid;</li>
+<li><code>bands</code> - <code>false</code> blends the colours smoothly between the values instead of banding them;</li>
+<li><code>above</code> - the <a href="#z-order">z-order</a>, <code>grayline</code> when left out.</li>
+</ul>
+<p>The grid is resampled onto one covering the whole earth, no finer than a quarter of a degree, so a
+grid may cross the date line.</p>
+<h3 id="mapplotfield">map.plotField</h3>
+<p><code>map.plotField</code> is DX Atlas 2's field, for the <a href="com_bridge.html">COM bridge</a>: <code>{&quot;map&quot;: 1, &quot;values&quot;: [[...], ...]}</code>, <code>values[x][y]</code>, N by N, <code>x</code> from 180°W to 180°E and <code>y</code> from 90°S to 90°N, both ends
+included, values from 0 to 1 banded in sixteenths. It is shown in place of the Ionosphere button's
+map until another map is chosen there, and is removed by a <code>map.plotField</code> with no values or when
+the connection closes. New programs use <code>layers.addField</code>.</p>
+<h2 id="fitting-the-map">Fitting the Map</h2>
+<p><code>map.fit</code> centres and zooms a map on a box, <code>{&quot;map&quot;: 1, &quot;bounds&quot;: [west, south, east, north]}</code> in
+degrees, or on all the features of a layer, <code>{&quot;map&quot;: 1, &quot;layer&quot;: 7}</code>, so that they fill about half
+of the map. A single point is shown at one kilometre per pixel.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

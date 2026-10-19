@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>The COM Bridge | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="The COM Bridge | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/developers_guide/com_bridge.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="the-com-bridge">The COM Bridge</h1>
+
+<p>Many logging and DX cluster programs drive DX Atlas 2 through its COM automation interface, the
+<code>DxAtlas.Atlas</code> object. The COM bridge lets them drive DX Atlas Pro instead, unchanged: it is a
+small COM server, <code>DxAtlasBridge.exe</code>, installed beside DX Atlas Pro on Windows, that registers
+itself under DX Atlas 2's names - its ProgID, <code>DxAtlas.Atlas</code>, its class id and its type library -
+and turns each call it receives into requests of the <a href="websocket_api.html">WebSocket API</a>.</p>
+<p>The bridge exists for existing software. A new program should use the WebSocket API directly: it
+can do everything the bridge does, and more.</p>
+<h2 id="com-registration">COM Registration</h2>
+<p>The DX Atlas Pro installer registers the bridge as a COM server, and uninstalling DX Atlas Pro
+unregisters it. This COM registration replaces DX Atlas 2's: once DX Atlas Pro is installed, a program that creates
+<code>DxAtlas.Atlas</code> gets DX Atlas Pro, whether DX Atlas 2 is installed or not. Both 32-bit and 64-bit
+programs can use it.</p>
+<p>To register or unregister the bridge as a COM server by hand, run in a command prompt opened as administrator:</p>
+<pre><code>&quot;C:\Program Files\Afreet\DxAtlasPro\DxAtlasBridge.exe&quot; /regserver
+&quot;C:\Program Files\Afreet\DxAtlasPro\DxAtlasBridge.exe&quot; /unregserver
+</code></pre>
+<p>To give the <code>DxAtlas.Atlas</code> name back to DX Atlas 2, unregister the bridge, then reinstall
+DX Atlas 2.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ul>
+<li>Each <code>DxAtlas.Atlas</code> object a program creates opens its own connection to DX Atlas Pro, so what
+it draws is removed when the program releases the object, or exits.</li>
+<li>If DX Atlas Pro is not running, the bridge starts it, as creating the object started DX Atlas 2,
+and DX Atlas Pro closes by itself once the last program using it has released its object. If it
+is already running, the bridge uses the running copy, which stays open.</li>
+<li>Calls between <code>Map.BeginUpdate</code> and <code>Map.EndUpdate</code> are sent as one batch, so the map is drawn
+once, when <code>EndUpdate</code> is called.</li>
+<li>The bridge works on DX Atlas Pro's first map only.</li>
+<li>The bridge writes the errors it meets to its own log, having no window to show them in:
+<code>DxAtlasBridge_&lt;date&gt;.txt</code> in the <code>Logs</code> folder of the folder that <strong>Help &gt; Data Folder</strong> opens,
+beside DX Atlas Pro's own <code>DxAtlasPro_&lt;date&gt;.txt</code>.</li>
+<li>A copy of DX Atlas Pro whose beta or trial period has expired does not accept connections, so
+creating the object fails.</li>
+</ul>
+<h2 id="what-is-covered">What Is Covered</h2>
+<p>Every object, property, method and event of DX Atlas 2's type library is there: <code>IAtlas</code>, <code>IDxMap</code>,
+<code>IDxClock</code>, <code>ICustomLayers</code>, <code>ICustomLayer</code>, <code>ILabelInfo</code> and the <code>IDxAtlasEvents</code> events. Most map
+to DX Atlas Pro's features directly; these work differently:</p>
+<table>
+<thead>
+<tr>
+<th>DX Atlas 2</th>
+<th>DX Atlas Pro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Map.Zoom</code></td>
+<td>converted to and from DX Atlas Pro's own zoom, so 1 is still the whole world</td>
+</tr>
+<tr>
+<td><code>Map.ReliefVisible</code>, <code>Land3D</code>, <code>Ocean3D</code></td>
+<td><strong>Land Relief</strong> and <strong>Ocean Relief</strong>; <code>ReliefVisible</code> sets both, and reads as on while either is</td>
+</tr>
+<tr>
+<td><code>Map.PrefixesVisible</code></td>
+<td>the DXCC Entities layer, with its prefixes</td>
+</tr>
+<tr>
+<td><code>Map.ItuZonesVisible</code></td>
+<td>the ARRL ITU zones</td>
+</tr>
+<tr>
+<td><code>Map.GridSquaresVisible</code></td>
+<td>the VUCC grid squares</td>
+</tr>
+<tr>
+<td><code>Map.IonoLayer</code></td>
+<td>the Ionosphere button's maps: MUF, foF2, hmF2, foE and the D layer's density as theirs; the magnetic maps as Magnetic Dip; the aurora as the Aurora Oval</td>
+</tr>
+<tr>
+<td><code>Map.MouseMode</code></td>
+<td><code>MM_USER</code> leaves the clicks to your program, as before; every other mode is DX Atlas Pro's own mouse handling</td>
+</tr>
+<tr>
+<td><code>Map.Dimmed</code></td>
+<td>the map drawn darker under your layers</td>
+</tr>
+<tr>
+<td><code>Map.PlotField</code></td>
+<td>DX Atlas 2's field, in its layout and bands</td>
+</tr>
+<tr>
+<td><code>Map.SaveImage</code></td>
+<td>the map as drawn on the screen, as PNG, or as BMP when asked</td>
+</tr>
+<tr>
+<td><code>Map.MarkSquare</code>, <code>Atlas.LoadSquares</code></td>
+<td>the worked and confirmed squares drawn as areas, yellow and green</td>
+</tr>
+<tr>
+<td><code>Atlas.LoadPins</code>, <code>Map.PinsVisible</code></td>
+<td>the pins of a DX Atlas 2 pin file drawn as red dots, with their comments as hints</td>
+</tr>
+<tr>
+<td><code>Atlas.IndexKind</code></td>
+<td>the Lists panel on the DXCC, Cities or IOTA layer</td>
+</tr>
+<tr>
+<td><code>Atlas.SaveSettings</code>, <code>LoadSettings</code></td>
+<td>DX Atlas Pro's settings, saved and loaded as JSON; a DX Atlas 2 <code>.ini</code> file is not read</td>
+</tr>
+<tr>
+<td>custom layers</td>
+<td>all five kinds - points, lines, areas, labels and glyphs - with their colours, brightness, fonts and glyph bitmaps; every line is drawn along the great circle</td>
+</tr>
+<tr>
+<td><code>LabelClicked</code>, <code>LabelHintRequest</code></td>
+<td>raised for labels and glyphs, with the <code>ILabelInfo</code> of DX Atlas 2; the hint set in <code>LabelHintRequest</code> is shown as before</td>
+</tr>
+</tbody>
+</table>
+<p>Accepted and ignored, as they have nothing to act on in DX Atlas Pro:</p>
+<ul>
+<li><code>Atlas.LoadCities</code> and <code>Atlas.LoadIslands</code> - DX Atlas Pro has its own city and island lists;</li>
+<li><code>Map.ShowFieldValue</code>, which did nothing in DX Atlas 2 either;</li>
+<li><code>Map.ActiveLabels</code>.</li>
+</ul>
+<h2 id="an-example">An Example</h2>
+<p>The <a href="examples.html#vbscript-the-com-bridge">Examples</a> page has a VBScript program that drives DX Atlas
+Pro through the bridge.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

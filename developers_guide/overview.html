@@ -87,8 +87,67 @@
         <article data-uid="">
 <h1 id="overview">Overview</h1>
 
-<p>DX Atlas Pro has a modern, rich API that lets other programs control the application and render their own custom data on the map. For existing software written for DX Atlas 2, a bridge is included that provides a COM interface compatible with the one in DX Atlas 2, so such programs can work with DX Atlas Pro.</p>
-<p>The API reference is coming soon.</p>
+<p>DX Atlas Pro can be driven by other programs - loggers, DX cluster clients, contest software,
+propagation tools - which move and zoom its maps, switch its layers, and draw their own data on
+them: spots, paths, areas, labels, icons and colour-coded fields. It offers two interfaces for this:</p>
+<ul>
+<li><strong>the WebSocket API</strong> - JSON-RPC 2.0 messages over a WebSocket on your own computer, usable from
+any language on Windows and Linux;</li>
+<li><strong>the COM bridge</strong> - a COM server, on Windows only, that offers the automation interface of
+DX Atlas 2, so that programs written for DX Atlas work with DX Atlas Pro unchanged.</li>
+</ul>
+<h2 id="which-one-to-choose">Which One to Choose</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>WebSocket API</th>
+<th>COM bridge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Platforms</strong></td>
+<td>Windows and Linux</td>
+<td>Windows</td>
+</tr>
+<tr>
+<td><strong>Languages</strong></td>
+<td>any language with a WebSocket client: Python, JavaScript, C#, Java, Go, Delphi, ...</td>
+<td>any COM client: Delphi, VB6, VBScript, C++, C#, ...</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>JSON objects, GeoJSON for the drawing</td>
+<td>DX Atlas 2's <code>DxAtlas.Atlas</code> object and its properties</td>
+</tr>
+<tr>
+<td><strong>Drawing</strong></td>
+<td>per-feature styles, shapes, icons, long paths, features that expire, fields</td>
+<td>DX Atlas 2's five layer kinds</td>
+</tr>
+<tr>
+<td><strong>Use it for</strong></td>
+<td>new programs</td>
+<td>existing programs written for DX Atlas 2</td>
+</tr>
+</tbody>
+</table>
+<p>Write a new program against the <a href="websocket_api.html">WebSocket API</a>. The <a href="com_bridge.html">COM bridge</a>
+exists for software that already drives DX Atlas 2: it translates each of DX Atlas's calls into the
+WebSocket API, so it offers nothing the API does not, and everything it draws is limited to what
+DX Atlas could draw.</p>
+<h2 id="in-this-guide">In This Guide</h2>
+<ul>
+<li><a href="enabling_the_api.html">Enabling the API</a> - the port, the allowed web pages, and starting DX Atlas
+Pro from your program;</li>
+<li><a href="websocket_api.html">The WebSocket API</a> - the message format, the errors, the methods that read and
+set the state of the window, the maps, the clock and the settings, and the events;</li>
+<li><a href="drawing.html">Drawing on the Map</a> - custom layers of GeoJSON features, their styles, icons, fields
+and z-order;</li>
+<li><a href="com_bridge.html">The COM Bridge</a> - its registration as a COM server, and what it covers of DX Atlas 2's interface;</li>
+<li><a href="examples.html">Examples</a> - complete programs in C, Python, JavaScript and VBScript.</li>
+</ul>
 
 </article>
 
