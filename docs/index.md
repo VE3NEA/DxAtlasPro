@@ -21,7 +21,7 @@ _Copyright &copy; 2026 Alex Shovkoplyas, VE3NEA_
 
 ### World Atlas
 
-A world atlas for Windows and Linux: map projections, relief, lakes and rivers, cities,
+A world atlas for **Windows and Linux**: map projections, relief, lakes and rivers, cities,
 <br>
 layers and labels, time zones, the day and night terminator, lists and search,
 <br>

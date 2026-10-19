@@ -3,3 +3,13 @@ name: Developer's Guide
 items:
   - name: Overview
     href: overview.md
+  - name: Enabling the API
+    href: enabling_the_api.md
+  - name: The WebSocket API
+    href: websocket_api.md
+  - name: Drawing on the Map
+    href: drawing.md
+  - name: The COM Bridge
+    href: com_bridge.md
+  - name: Examples
+    href: examples.md
