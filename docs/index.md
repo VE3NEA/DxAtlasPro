@@ -10,7 +10,7 @@ _layout: landing
 </div>
 <div style="text-align: left">
 
-# DX Atlas Pro v.0.91 Beta
+# DX Atlas Pro v.0.92 Beta
 
 _Copyright &copy; 2026 Alex Shovkoplyas, VE3NEA_
 
