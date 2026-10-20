@@ -13,7 +13,9 @@ map:
   than its true height, and a point near the coast reads between the land and the sea;
 - 🧭 **Azimuth and distance from home** - the bearing and the distance from your home location to
   the point along the great circle, then, after **LP**, the same along the long path: the opposite
-  bearing and the rest of the great circle around the Earth;
+  bearing and the rest of the great circle around the Earth. While you drag the mouse with the
+  [Great Circle](great_circle.md) button down, they are measured from the point where you pressed
+  the mouse button instead of from home;
 - ⊞ **Grid square** - the 6-character Maidenhead locator of the point;
 - 🔆 **Sunrise and sunset** at the point, in UTC or local time as the **UTC** and **Local**
   switch of the [Clock](clock.md) panel selects, on the day the panel shows, or **polar day** or

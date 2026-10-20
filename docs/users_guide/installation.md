@@ -33,11 +33,11 @@ use its COM interface.
 
 The Linux version is a self-contained archive: it needs no installation and no .NET Runtime.
 
-1. Unpack the archive to any folder, for example your home folder:
+1. Unpack the archive to any folder, for example your home folder; it creates a `DxAtlasPro`
+   folder there:
 
    ```bash
-   mkdir -p ~/DxAtlasPro
-   tar -xzf DxAtlasPro-v.X.Y-linux-x64.tar.gz -C ~/DxAtlasPro
+   tar -xzf DxAtlasPro-v.X.Y-linux-x64.tar.gz -C ~
    ```
 
 2. Run the program:
