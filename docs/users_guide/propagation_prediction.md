@@ -24,7 +24,8 @@ separately.
 The map is drawn in bands of S-meter readings, from S1 up to S9+12 dB, with a green line at each
 band edge; below S1 it is left clear. The legend in the lower left corner names the band, with
 **LP** after it on the long path. The status bar's 📶 cell shows the reading at the point under the
-mouse: `S7`, or `S9 + 10 dB`.
+mouse: `S7`, or `S9 + 10 dB`; with **Value Tooltip** on in the **Map** section of
+[**Tools > Settings**](settings.md#map), a tooltip with the same reading follows the mouse over the map.
 
 How to read the map, and how many S units to add or subtract when your station differs from the
 settings, is explained in [HF Propagation](reading_the_maps.md#hf-propagation) on the

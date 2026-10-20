@@ -42,7 +42,9 @@ over any map. Each map panel has its own choice, so the two maps can show differ
 Each map is drawn in bands of colour, with the legend in the lower left corner of the map: its
 name and its unit. The status bar's 📶 cell shows the
 value at the point under the mouse - `7.2 MHz`, `312 km`, and with Magnetic Dip and Aurora on,
-`dip 23°` and `aurora 15%` after it. While a map is being computed, the cell shows `…`.
+`dip 23°` and `aurora 15%` after it. While a map is being computed, the cell shows `…`. To see the
+value beside the mouse instead of looking down at the status bar, turn on **Value Tooltip** in
+the **Map** section of [**Tools > Settings**](settings.md#map): a tooltip with the same value then follows the mouse over the map.
 
 ## The Ionospheric Parameters Dialog
 

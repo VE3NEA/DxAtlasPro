@@ -40,7 +40,10 @@ The settings both maps share:
   - **Night Shadow** - the darker shadow over the night side;
   - **Twilight** - where the twilight shadow ends and the night shadow begins: at the end of
     **Civil**, **Nautical** or **Astronomical** twilight, with the sun 6°, 12° or 18° under the
-    horizon.
+    horizon;
+- **Value Tooltip** - while an [ionospheric map](ionospheric_maps.md) or the
+  [propagation map](propagation_prediction.md) is shown, a tooltip follows the mouse over the map
+  with the map's value under it, as the status bar shows it. Off by default.
 
 ## Propagation
 

@@ -9,8 +9,7 @@ between them on the globe. Click it again to stop drawing.
 
 To see the path between two other points, press the left mouse button on the first point and drag
 the mouse to the second: while the button is held, the map draws the great circle, short path and
-long path, from the point where you pressed the button to the point under the mouse, with an
-antenna at each end, and the [Status Bar](status_bar.md) shows the bearing and the distance along
+long path, between these points, and the [Status Bar](status_bar.md) shows the bearing and the distance along
 this path, from the point where you pressed the button. When you release the button, the great
 circle from your home location returns. While the **Great Circle**
 button is down, dragging the mouse draws this path instead of moving the map; use the mouse wheel to
