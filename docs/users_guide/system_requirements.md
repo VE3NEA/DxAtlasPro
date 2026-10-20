@@ -15,4 +15,10 @@
 - **Windows**: Windows 10 or Windows 11, 64-bit. The setup program installs the .NET 10 Runtime
   and the Microsoft Visual C++ Redistributable if they are not on the computer yet;
 - **Linux**: 64-bit x64 Linux with an X11 desktop and an OpenGL driver. The program is
-  self-contained and needs no .NET Runtime. Tested on Ubuntu 24.04.
+  self-contained and needs no .NET Runtime. Tested on Ubuntu 24.04 and Linux Mint 22.3. The
+  OpenGL driver is normally installed with the desktop.
+
+  To see which display system your desktop uses, type `echo $XDG_SESSION_TYPE` in a terminal: it
+  prints `x11` or `wayland`. On a Wayland desktop the program runs through XWayland, which most
+  distributions install with the desktop; this has not been tested yet, so if the program does not
+  start, choose an X11 (often called "Xorg") session on the login screen.
