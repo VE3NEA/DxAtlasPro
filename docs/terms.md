@@ -1,5 +1,8 @@
 # Terms and Conditions
 
+> **Note:** DX Atlas Pro is in beta testing, and each beta is free until its expiry date.
+> Registration keys go on sale with the first public release, v.1.0; these terms apply from then on.
+
 These terms apply to the purchase of a DX Atlas Pro registration key. DX Atlas Pro is published
 by Afreet Software Inc, Ontario, Canada ("we", "us").
 
