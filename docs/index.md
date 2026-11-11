@@ -5,9 +5,6 @@ _layout: landing
 <center>
 
 <div style="display: flex; align-items: center; justify-content: center; gap: 16px">
-<div style="width: 64px; flex-shrink: 0">
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=dsyvQwFsGBZ-qp-hpKbLXR5ppXXrvZlOm3tGXrcHA-Y"></script>
-</div>
 <div style="text-align: left">
 
 # DX Atlas Pro v.0.92 Beta

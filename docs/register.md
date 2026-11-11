@@ -19,3 +19,14 @@ Registration will be available at the end of the beta testing.
 
 DX Atlas Pro is a new program. It is not an upgrade of DX Atlas, and
 DX Atlas licences do not cover it.
+
+<br>
+
+### Terms and Policies
+
+- [End-User Licence Agreement](license.md)
+- [Terms and Conditions](terms.md)
+- [Privacy Policy](privacy.md)
+- [Refund Policy](refund.md)
+
+Questions: [support@dxatlas.com](mailto:support@dxatlas.com)

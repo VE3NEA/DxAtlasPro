@@ -33,7 +33,8 @@
       "pdfFileName": "dxatlaspro_users_guide.pdf",
       "pdfTocPage": true,
       "pdfCoverPage": "users_guide/pdf_cover.html",
-      "_disableContribution": true
+      "_disableContribution": true,
+      "_appFooter": "<span>© 2026 Alex Shovkoplyas, VE3NEA ·<a href=\"https://ve3nea.github.io/DxAtlasPro/license.html\">Licence Agreement</a> · <a href=\"https://ve3nea.github.io/DxAtlasPro/terms.html\">Terms and Conditions</a> · <a href=\"https://ve3nea.github.io/DxAtlasPro/privacy.html\">Privacy Policy</a> · <a href=\"https://ve3nea.github.io/DxAtlasPro/refund.html\">Refund Policy</a> · <a href=\"mailto:support@dxatlas.com\">support@dxatlas.com</a></span>"
     }
   }
 }
