@@ -99,10 +99,17 @@ the auroral oval in real time.</li>
 </ul>
 <h2 id="software">Software</h2>
 <ul>
-<li><strong>Windows</strong>: Windows 10 or Windows 11, 64-bit. The setup program installs the .NET 10 Runtime
-and the Microsoft Visual C++ Redistributable if they are not on the computer yet;</li>
-<li><strong>Linux</strong>: 64-bit x64 Linux with an X11 desktop and an OpenGL driver. The program is
-self-contained and needs no .NET Runtime. Tested on Ubuntu 24.04.</li>
+<li><p><strong>Windows</strong>: Windows 10 or Windows 11, 64-bit. The setup program installs the .NET 10 Runtime
+and the Microsoft Visual C++ Redistributable if they are not on the computer yet;</p>
+</li>
+<li><p><strong>Linux</strong>: 64-bit x64 Linux with an X11 desktop and an OpenGL driver. The program is
+self-contained and needs no .NET Runtime. Tested on Ubuntu 24.04 and Linux Mint 22.3. The
+OpenGL driver is normally installed with the desktop.</p>
+<p>To see which display system your desktop uses, type <code>echo $XDG_SESSION_TYPE</code> in a terminal: it
+prints <code>x11</code> or <code>wayland</code>. On a Wayland desktop the program runs through XWayland, which most
+distributions install with the desktop; this has not been tested yet, so if the program does not
+start, choose an X11 (often called &quot;Xorg&quot;) session on the login screen.</p>
+</li>
 </ul>
 
 </article>
@@ -122,7 +129,7 @@ self-contained and needs no .NET Runtime. Tested on Ubuntu 24.04.</li>
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>© 2026 Alex Shovkoplyas, VE3NEA ·&nbsp;<a href="https://ve3nea.github.io/DxAtlasPro/privacy.html">Privacy Policy</a> ·&nbsp;<a href="mailto:support@dxatlas.com">support@dxatlas.com</a></span>
         </div>
       </div>
     </footer>

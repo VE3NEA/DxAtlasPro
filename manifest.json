@@ -75,11 +75,11 @@
       "type": "Toc",
       "source_relative_path": "developers_guide/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "developers_guide/toc.html"
-        },
         ".json": {
           "relative_path": "developers_guide/toc.json"
+        },
+        ".html": {
+          "relative_path": "developers_guide/toc.html"
         }
       },
       "version": ""
@@ -756,6 +756,36 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "license.md",
+      "output": {
+        ".html": {
+          "relative_path": "license.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "privacy.md",
+      "output": {
+        ".html": {
+          "relative_path": "privacy.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "refund.md",
+      "output": {
+        ".html": {
+          "relative_path": "refund.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "register.md",
       "output": {
         ".html": {
@@ -765,14 +795,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "terms.md",
+      "output": {
+        ".html": {
+          "relative_path": "terms.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "toc.html"
-        },
         ".json": {
           "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
         }
       },
       "version": ""
@@ -1081,11 +1121,11 @@
       "type": "Toc",
       "source_relative_path": "users_guide/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "users_guide/toc.html"
-        },
         ".json": {
           "relative_path": "users_guide/toc.json"
+        },
+        ".html": {
+          "relative_path": "users_guide/toc.html"
         }
       },
       "version": ""
