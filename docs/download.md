@@ -12,7 +12,7 @@ DX Atlas Pro v.0.92 Beta
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
 
-See [Register](register.md) for the free beta and its expiry.
+DX Atlas Pro is free to use for 30 days; see [Register](register.md) for the trial and the price.
 
 <br>
 

@@ -1,8 +1,5 @@
 # Refund Policy
 
-> **Note:** DX Atlas Pro is in beta testing, and each beta is free until its expiry date.
-> Registration keys go on sale with the first public release, v.1.0; this policy applies from then on.
-
 ## Try before you buy
 
 DX Atlas Pro can be used free of charge for 30 days, with no function disabled or limited. Please
