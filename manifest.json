@@ -1089,6 +1089,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "users_guide/registration.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/registration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "users_guide/settings.md",
       "output": {
         ".html": {
