@@ -25,7 +25,7 @@ store may show it in your local currency.
 After your payment is processed, the store emails the registration key to the email address you
 entered at checkout. If the key does not arrive, check your spam folder, then contact us.
 
-The key is issued to one person by name: the name or callsign you enter at checkout, or else
+The key is issued to one person by name: the registration name you enter at checkout, or else
 your billing name. That name is shown in the program's **Help > About** box. The key may be used
 only by that person, on any computer that person uses. The key registers all 1.xx versions of
 DX Atlas Pro, from 1.0 on, including those released after your purchase.

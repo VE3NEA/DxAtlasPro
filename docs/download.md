@@ -4,10 +4,10 @@
 
 ### Current Version
 
-DX Atlas Pro v.0.92 Beta
+DX Atlas Pro v.1.0
 
-- Windows: [DxAtlasProSetup-v.0.92.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.0.92/DxAtlasProSetup-v.0.92.exe)
-- Linux x64: [DxAtlasPro-v.0.92-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.0.92/DxAtlasPro-v.0.92-linux-x64.tar.gz)
+- Windows: [DxAtlasProSetup-v.1.0.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.0/DxAtlasProSetup-v.1.0.exe)
+- Linux x64: [DxAtlasPro-v.1.0-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.0/DxAtlasPro-v.1.0-linux-x64.tar.gz)
 
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
@@ -23,6 +23,10 @@ See [All Releases](https://github.com/VE3NEA/DxAtlasPro/releases)
 <br>
 
 ### Release Notes
+
+#### v.1.0
+
+- first stable release, with all defects reported during beta testing fixed
 
 #### v.0.92 Beta
 
