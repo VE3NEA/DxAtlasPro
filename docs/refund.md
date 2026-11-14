@@ -15,11 +15,8 @@ Within 30 days of purchase, an order is refunded:
 
 ## How to ask for a refund
 
-Refunds are handled by the store you bought from, which is the merchant of record for your order:
-
-- **PayPro Global:** through its [customer support](https://payproglobal.com/customer-support/),
-  or the customer control panel whose link is in your order email;
-- **BMT Micro:** through its [customer support](https://www.bmtmicro.com/).
+Refunds are handled by the store, [BMT Micro](https://www.bmtmicro.com/), which is the merchant of
+record for your order: ask through its customer support.
 
 Give the store your order id, which is in its order email, and the reason for the refund. The
 refund is paid to your original payment method; the time it takes to reach your account depends

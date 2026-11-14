@@ -24,8 +24,7 @@ browser.
 ## Purchases
 
 When you buy a registration key, you enter your name, email address and billing details at the
-checkout of the store, [PayPro Global](https://payproglobal.com/) or
-[BMT Micro](https://www.bmtmicro.com/). The store processes your payment under its own privacy
+checkout of the store, [BMT Micro](https://www.bmtmicro.com/). The store processes your payment under its own privacy
 policy; we never see your card or payment details.
 
 The store passes the order to us. We use it as follows:

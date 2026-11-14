@@ -14,9 +14,7 @@ days left are shown in the program's **Help > About** box.
 A registration key for DX Atlas Pro costs **USD 49.95**. It is issued to one person by name and
 registers all 1.xx versions of the program.
 
-<a class="btn btn-primary" href="https://store.payproglobal.com/checkout?products[1][id]=139995&page-template=22379">Buy now</a>
-
-Alternative store: [BMT Micro](https://secure.bmtmicro.com/cart?CID=14347&PRODUCTID=14347000006)
+<a class="btn btn-primary" href="https://secure.bmtmicro.com/cart?CID=14347&PRODUCTID=14347000006">Buy now</a>
 
 The store emails the key right after the purchase. To register, open **Help > Enter
 Registration Key** in DX Atlas Pro, or click **Enter Registration Key** in the dialog shown when

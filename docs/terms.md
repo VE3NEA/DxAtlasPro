@@ -10,13 +10,10 @@ program is disabled or limited, so you can check that it meets your needs and wo
 computer before you buy. When the trial ends, the program stops working until a registration key
 is entered.
 
-## The stores
+## The store
 
-Registration keys are sold by two online stores, each acting as the merchant of record for your
-order:
-
-- [PayPro Global](https://payproglobal.com/), the main store;
-- [BMT Micro](https://www.bmtmicro.com/), the alternative store.
+Registration keys are sold by [BMT Micro](https://www.bmtmicro.com/), an online store acting as the
+merchant of record for your order.
 
 The store processes your payment, charges and remits any applicable sales tax or VAT, issues the
 invoice and handles billing questions, under its own terms of sale, which you accept at its
@@ -26,8 +23,7 @@ store may show it in your local currency.
 ## The registration key
 
 After your payment is processed, the store emails the registration key to the email address you
-entered at checkout, and PayPro Global also shows it on its order confirmation page. If the key
-does not arrive, check your spam folder, then contact us.
+entered at checkout. If the key does not arrive, check your spam folder, then contact us.
 
 The key is issued to one person by name: the name or callsign you enter at checkout, or else
 your billing name. That name is shown in the program's **Help > About** box. The key may be used
@@ -45,7 +41,7 @@ Refunds are described in the [Refund Policy](refund.md).
 
 For questions about DX Atlas Pro or your registration key, write to
 [support@dxatlas.com](mailto:support@dxatlas.com). For questions about payment, invoices or the
-order itself, contact the store you bought from.
+order itself, contact the store.
 
 ## Governing law
 
