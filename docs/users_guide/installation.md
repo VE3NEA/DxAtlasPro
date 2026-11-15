@@ -49,6 +49,13 @@ The Linux version is a self-contained archive: it needs no installation and no .
    ~/DxAtlasPro/DxAtlasPro
    ```
 
-To install a new version, unpack it over the old one. Your settings are kept in
+To install a new version, first delete the old `DxAtlasPro` folder, then unpack the new archive
+as in step 1:
+
+```bash
+rm -rf ~/DxAtlasPro
+```
+
+Your settings are not in that folder, so they are kept: they are in
 `~/.config/Afreet/Products/DxAtlasPro`. To uninstall, delete the program folder and, if you
 do not need your settings any more, that folder too.
