@@ -4,10 +4,10 @@
 
 ### Current Version
 
-DX Atlas Pro v.1.0
+DX Atlas Pro v.1.1
 
-- Windows: [DxAtlasProSetup-v.1.0.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.0/DxAtlasProSetup-v.1.0.exe)
-- Linux x64: [DxAtlasPro-v.1.0-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.0/DxAtlasPro-v.1.0-linux-x64.tar.gz)
+- Windows: [DxAtlasProSetup-v.1.1.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.1/DxAtlasProSetup-v.1.1.exe)
+- Linux x64: [DxAtlasPro-v.1.1-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.1/DxAtlasPro-v.1.1-linux-x64.tar.gz)
 
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
@@ -23,6 +23,12 @@ See [All Releases](https://github.com/VE3NEA/DxAtlasPro/releases)
 <br>
 
 ### Release Notes
+
+#### v.1.1
+
+- great circle path on both maps, long path in red
+- Readout tooltip: azimuth, distance and the reading under the pointer
+- DXView: the window comes to the front, DXView's lines are shown
 
 #### v.1.0
 
