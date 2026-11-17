@@ -19,6 +19,23 @@ with DX Atlas Pro; see the [Developer's Guide](https://ve3nea.github.io/DxAtlasP
 
 To install a new version, run its setup over the old one. Your settings are kept.
 
+### If Windows blocks the setup
+
+The setup program is not code-signed, so Windows warns about it as it warns about any new
+program from a small developer:
+
+- **Edge says the file "isn't commonly downloaded"** - in the Downloads list, click **...**
+  beside the file, then **Keep**, then **Show more** and **Keep anyway**;
+- **"Windows protected your PC"** when you run the setup - click **More info**, then
+  **Run anyway**;
+- **the setup does not start at all** - right-click the downloaded file in File Explorer,
+  choose **Properties**, tick **Unblock** at the bottom of the **General** tab, click **OK**, and
+  run the setup again.
+
+**Smart App Control**, where it is on, blocks unsigned programs, and none of the steps above get
+past it. You can see whether it is on in **Windows Security > App & browser control > Smart App
+Control settings**.
+
 ### Uninstalling
 
 Uninstall DX Atlas Pro from **Settings > Apps > Installed apps** in Windows. Your settings are
