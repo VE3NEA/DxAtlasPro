@@ -3,7 +3,10 @@
 The **Great Circle** button on the map toolbar, right of the **Home** button, draws the path of a
 signal from your station. Click it to keep it down: while it is down, the map draws the great
 circle from your [home location](home_location.md) to the point under the mouse, the shortest path
-between them on the globe. Click it again to stop drawing.
+between them on the globe. The short path is drawn as a solid green line, the long path as a dashed
+red line. The path is drawn on both maps, whichever of them the mouse is over, and while both maps are shown,
+the button on either map turns the great circle on and off on both. Click the button again to stop
+drawing.
 
 ![The great circle from home to the mouse, on the rectangular map](../images/great_circle.png)
 
@@ -17,7 +20,8 @@ zoom, or click the button again to drag the map.
 
 The bearing and the distance along the great circle, by the short and the long path, are shown in
 the [Status Bar](status_bar.md): the bearing to turn the beam to, and, after **LP**, the opposite
-bearing and the distance the other way around the Earth.
+bearing and the distance the other way around the Earth. To see them beside the mouse, turn on
+**Readout Tooltip** in the **Map** section of [Settings](settings.md).
 
 With the Amateur Radio functions on, the home location is marked with an antenna in place of the
 house.

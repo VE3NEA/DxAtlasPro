@@ -41,9 +41,10 @@ The settings both maps share:
   - **Twilight** - where the twilight shadow ends and the night shadow begins: at the end of
     **Civil**, **Nautical** or **Astronomical** twilight, with the sun 6°, 12° or 18° under the
     horizon;
-- **Value Tooltip** - while an [ionospheric map](ionospheric_maps.md) or the
-  [propagation map](propagation_prediction.md) is shown, a tooltip follows the mouse over the map
-  with the map's value under it, as the status bar shows it. Off by default.
+- **Readout Tooltip** - a tooltip follows the mouse over either map with the bearing and the
+  distance from your home location, short path and long path, and, while an
+  [ionospheric map](ionospheric_maps.md) or the [propagation map](propagation_prediction.md) is
+  shown, the map's value under the mouse, each named in full. Off by default.
 
 ## Propagation
 

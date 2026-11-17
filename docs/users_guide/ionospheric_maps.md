@@ -43,8 +43,10 @@ Each map is drawn in bands of colour, with the legend in the lower left corner o
 name and its unit. The status bar's 📶 cell shows the
 value at the point under the mouse - `7.2 MHz`, `312 km`, and with Magnetic Dip and Aurora on,
 `dip 23°` and `aurora 15%` after it. While a map is being computed, the cell shows `…`. To see the
-value beside the mouse instead of looking down at the status bar, turn on **Value Tooltip** in
-the **Map** section of [**Tools > Settings**](settings.md#map): a tooltip with the same value then follows the mouse over the map.
+value beside the mouse instead of looking down at the status bar, turn on **Readout Tooltip** in
+the **Map** section of [**Tools > Settings**](settings.md#map): a tooltip then follows the mouse
+over the map with each value named in full - `F2 Layer Critical Frequency: 7.2 MHz` - under the
+bearing and distance from your home location.
 
 ## The Ionospheric Parameters Dialog
 
