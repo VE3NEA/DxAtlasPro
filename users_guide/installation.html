@@ -103,6 +103,21 @@ setup downloads and installs it;</li>
 menu. The setup also registers the COM interface that lets programs written for DX Atlas 2 work
 with DX Atlas Pro; see the <a href="https://ve3nea.github.io/DxAtlasPro/developers_guide/overview.html">Developer's Guide</a>.</p>
 <p>To install a new version, run its setup over the old one. Your settings are kept.</p>
+<h3 id="if-windows-blocks-the-setup">If Windows blocks the setup</h3>
+<p>The setup program is not code-signed, so Windows warns about it as it warns about any new
+program from a small developer:</p>
+<ul>
+<li><strong>Edge says the file &quot;isn't commonly downloaded&quot;</strong> - in the Downloads list, click <strong>...</strong>
+beside the file, then <strong>Keep</strong>, then <strong>Show more</strong> and <strong>Keep anyway</strong>;</li>
+<li><strong>&quot;Windows protected your PC&quot;</strong> when you run the setup - click <strong>More info</strong>, then
+<strong>Run anyway</strong>;</li>
+<li><strong>the setup does not start at all</strong> - right-click the downloaded file in File Explorer,
+choose <strong>Properties</strong>, tick <strong>Unblock</strong> at the bottom of the <strong>General</strong> tab, click <strong>OK</strong>, and
+run the setup again.</li>
+</ul>
+<p><strong>Smart App Control</strong>, where it is on, blocks unsigned programs, and none of the steps above get
+past it. You can see whether it is on in <strong>Windows Security &gt; App &amp; browser control &gt; Smart App
+Control settings</strong>.</p>
 <h3 id="uninstalling">Uninstalling</h3>
 <p>Uninstall DX Atlas Pro from <strong>Settings &gt; Apps &gt; Installed apps</strong> in Windows. Your settings are
 not removed; they stay in <code>%APPDATA%\Afreet\Products\DxAtlasPro</code>, and you can delete that folder
