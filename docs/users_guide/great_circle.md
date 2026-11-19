@@ -18,6 +18,11 @@ circle from your home location returns. While the **Great Circle**
 button is down, dragging the mouse draws this path instead of moving the map; use the mouse wheel to
 zoom, or click the button again to drag the map.
 
+A click of the left mouse button - pressed and released without moving the mouse - freezes the path
+where it is: it stops following the mouse, so you can move the mouse to the [Status Bar](status_bar.md)
+or away to read the bearing and the distance. Another click lets it follow the mouse again. A
+frozen path is frozen on both maps.
+
 The bearing and the distance along the great circle, by the short and the long path, are shown in
 the [Status Bar](status_bar.md): the bearing to turn the beam to, and, after **LP**, the opposite
 bearing and the distance the other way around the Earth. To see them beside the mouse, turn on

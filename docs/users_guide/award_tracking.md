@@ -23,7 +23,7 @@ are separate lists, as are bands and modes: "Worked", "Confirmed", "160 m", "CW"
 "160 m confirmed".
 
 1. pick the layer in the **Layer** box;
-2. in the **List** box, pick **New List...** and type the list's name;
+2. in the menu right of the **List** box, pick **New List...** and type the list's name;
 3. tick the checkbox of each item you have; type in the **Search** box to find an item quickly. On
    the DXCC layer, typing the callsign of a station you worked finds its entity; see
    [Prefix Search](prefix_search.md).
@@ -50,4 +50,4 @@ the [Colors Dialog](colors.md).
 
 ## Deleting a List
 
-Pick **Delete List...** in the List box and confirm it. The list and its ticks are deleted.
+Pick **Delete List...** in the menu right of the List box and confirm it. The list and its ticks are deleted.

@@ -35,7 +35,8 @@ DX Atlas 2.
   is already running, the bridge uses the running copy, which stays open.
 - Calls between `Map.BeginUpdate` and `Map.EndUpdate` are sent as one batch, so the map is drawn
   once, when `EndUpdate` is called.
-- The bridge works on DX Atlas Pro's first map only.
+- What a program draws - layers, `PlotField`, the aim - is shown on both of DX Atlas Pro's maps;
+  the map's settings, its image and its events are those of the first map only.
 - The bridge writes the errors it meets to its own log, having no window to show them in:
   `DxAtlasBridge_<date>.txt` in the `Logs` folder of the folder that **Help > Data Folder** opens,
   beside DX Atlas Pro's own `DxAtlasPro_<date>.txt`.

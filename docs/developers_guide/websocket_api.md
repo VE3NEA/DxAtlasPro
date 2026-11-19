@@ -70,7 +70,9 @@ user - with **events**: notifications from DX Atlas Pro, which have a `method` a
 ### Conventions
 
 - **Maps** - DX Atlas Pro has two map panels, numbered 1 and 2. A method that acts on a map takes
-  an optional `"map": 1` or `"map": 2`, map 1 when it is left out.
+  an optional `"map": 1` or `"map": 2`, map 1 when it is left out. `layers.add`, `layers.addField`,
+  `layers.clear`, `map.plotField` and `map.showAim` also take `"map": 0`, for both maps: the layer or
+  the field is then drawn on each map, as the COM bridge draws what a logging program sends.
 - **Coordinates** - in degrees, latitude positive north and longitude positive east. As named
   fields they are `lat` and `lon`; as arrays, as in GeoJSON, `[lon, lat]`.
 - **Zoom** - in kilometres per pixel at the centre of the map, `kmPerPixel`, a number that means

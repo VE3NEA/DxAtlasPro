@@ -41,9 +41,14 @@ item. The lists are saved as soon as they change.
 The List box holds:
 
 - **&lt;none&gt;** - no list selected, and no checkboxes;
-- the lists of the layer, by name;
+- the lists of the layer, by name.
+
+The button right of the List box opens a menu of list commands:
+
 - **New List...** - prompts for a name and creates an empty list;
-- **Delete List...** - deletes the selected list, once you confirm it.
+- **Delete List...** - deletes the selected list, once you confirm it;
+- **Check All** - ticks every item of the layer, so the map shows them all; when they are all
+  ticked it shows a check mark, and clicking it clears them all.
 
 The layers of the atlas - cities, countries, rivers and the rest - are for looking items up and
 have no lists, so their List box is disabled. Your own layers and the Pins layer have lists, and so

@@ -11,7 +11,7 @@ station you worked. They are kept in lists on the **Pins** layer of the
 Pins can be added only once a pin list exists:
 
 1. in the Lists panel, pick **Pins** in the **Layer** box;
-2. in the **List** box, pick **New List...** and type a name for the list.
+2. in the menu right of the **List** box, pick **New List...** and type a name for the list.
 
 You can keep several pin lists - one per trip, say - and switch between them in the List box. The
 maps show the pins of the list selected on the Pins layer, even while the Lists panel shows another
