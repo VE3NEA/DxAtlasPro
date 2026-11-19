@@ -114,7 +114,8 @@ and DX Atlas Pro closes by itself once the last program using it has released it
 is already running, the bridge uses the running copy, which stays open.</li>
 <li>Calls between <code>Map.BeginUpdate</code> and <code>Map.EndUpdate</code> are sent as one batch, so the map is drawn
 once, when <code>EndUpdate</code> is called.</li>
-<li>The bridge works on DX Atlas Pro's first map only.</li>
+<li>What a program draws - layers, <code>PlotField</code>, the aim - is shown on both of DX Atlas Pro's maps;
+the map's settings, its image and its events are those of the first map only.</li>
 <li>The bridge writes the errors it meets to its own log, having no window to show them in:
 <code>DxAtlasBridge_&lt;date&gt;.txt</code> in the <code>Logs</code> folder of the folder that <strong>Help &gt; Data Folder</strong> opens,
 beside DX Atlas Pro's own <code>DxAtlasPro_&lt;date&gt;.txt</code>.</li>
