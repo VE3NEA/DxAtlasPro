@@ -136,10 +136,30 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/app-and-browser-control.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/app-and-browser-control.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/arrl_sections.png",
       "output": {
         "resource": {
           "relative_path": "images/arrl_sections.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/blocked-an-app.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/blocked-an-app.png"
         }
       },
       "version": ""
@@ -726,6 +746,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/run-anyway.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/run-anyway.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/security-at-a-glance.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/security-at-a-glance.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/settings_dialog.png",
       "output": {
         "resource": {
@@ -736,10 +776,30 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/smart-app-control.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/smart-app-control.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/status_bar.png",
       "output": {
         "resource": {
           "relative_path": "images/status_bar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/unblock.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/unblock.png"
         }
       },
       "version": ""
@@ -760,6 +820,16 @@
       "output": {
         "resource": {
           "relative_path": "images/window-layout.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/windows-protected-your-pc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/windows-protected-your-pc.png"
         }
       },
       "version": ""
