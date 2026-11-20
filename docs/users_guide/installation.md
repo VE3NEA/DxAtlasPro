@@ -34,15 +34,38 @@ program from a small developer:
 
   ![Edge dialog with the Keep anyway command under the Delete button](../images/keep-anyway.png)
 
-- **"Windows protected your PC"** when you run the setup - click **More info**, then
-  **Run anyway**;
+- **"Windows protected your PC"** when you run the setup - click **More info**:
+
+  ![The Windows protected your PC message](../images/windows-protected-your-pc.png)
+
+  then click **Run anyway**:
+
+  ![The Run anyway button](../images/run-anyway.png)
+
 - **the setup does not start at all** - right-click the downloaded file in File Explorer,
   choose **Properties**, tick **Unblock** at the bottom of the **General** tab, click **OK**, and
-  run the setup again.
+  run the setup again:
+
+  ![The Unblock checkbox in the file Properties](../images/unblock.png)
 
 **Smart App Control**, where it is on, blocks unsigned programs, and none of the steps above get
-past it. You can see whether it is on in **Windows Security > App & browser control > Smart App
-Control settings**.
+past it. Instead of "Windows protected your PC", the setup shows this message:
+
+![The Smart App Control blocked an app message](../images/blocked-an-app.png)
+
+You can see whether Smart App Control is on in Windows Security. Open it from the Start menu
+and click **App & browser control**:
+
+![The Windows Security home page](../images/security-at-a-glance.png)
+
+then click **Smart App Control settings**:
+
+![The App & browser control page of Windows Security](../images/app-and-browser-control.png)
+
+To run the setup, set Smart App Control to **Off**. Windows does not let you turn it back on
+later without resetting the computer:
+
+![The Smart App Control settings page](../images/smart-app-control.png)
 
 ### Uninstalling
 
