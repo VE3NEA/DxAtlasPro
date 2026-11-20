@@ -626,6 +626,26 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/isnt-commonly-downloaded.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/isnt-commonly-downloaded.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/keep-anyway.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/keep-anyway.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/labels_menu.png",
       "output": {
         "resource": {
