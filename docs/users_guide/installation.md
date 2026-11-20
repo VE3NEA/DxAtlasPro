@@ -22,33 +22,39 @@ To install a new version, run its setup over the old one. Your settings are kept
 ### If Windows blocks the setup
 
 The setup program is not code-signed, so Windows warns about it as it warns about any new
-program from a small developer:
+program from a small developer. Find the message you see below.
 
-- **Edge says the file "isn't commonly downloaded"** - in the Downloads list, click **...**
-  beside the file, then **Keep**:
+#### Edge says the file "isn't commonly downloaded"
 
-  ![Edge Downloads list with the Keep command](../images/isnt-commonly-downloaded.png)
+In the Downloads list, click **...** beside the file, then **Keep**:
 
-  Edge then asks you to make sure you trust the file. Click the arrow on the **Delete** button
-  and choose **Keep anyway**:
+![Edge Downloads list with the Keep command](../images/isnt-commonly-downloaded.png)
 
-  ![Edge dialog with the Keep anyway command under the Delete button](../images/keep-anyway.png)
+Edge then asks you to make sure you trust the file. Click the arrow on the **Delete** button
+and choose **Keep anyway**:
 
-- **"Windows protected your PC"** when you run the setup - click **More info**:
+![Edge dialog with the Keep anyway command under the Delete button](../images/keep-anyway.png)
 
-  ![The Windows protected your PC message](../images/windows-protected-your-pc.png)
+#### "Windows protected your PC"
 
-  then click **Run anyway**:
+This message appears when you run the setup. Click **More info**:
 
-  ![The Run anyway button](../images/run-anyway.png)
+![The Windows protected your PC message](../images/windows-protected-your-pc.png)
 
-- **the setup does not start at all** - right-click the downloaded file in File Explorer,
-  choose **Properties**, tick **Unblock** at the bottom of the **General** tab, click **OK**, and
-  run the setup again:
+then click **Run anyway**:
 
-  ![The Unblock checkbox in the file Properties](../images/unblock.png)
+![The Run anyway button](../images/run-anyway.png)
 
-**Smart App Control**, where it is on, blocks unsigned programs, and none of the steps above get
+#### The setup does not start at all
+
+Right-click the downloaded file in File Explorer, choose **Properties**, tick **Unblock** at the
+bottom of the **General** tab, click **OK**, and run the setup again:
+
+![The Unblock checkbox in the file Properties](../images/unblock.png)
+
+#### Smart App Control blocked an app
+
+Smart App Control, where it is on, blocks unsigned programs, and none of the steps above get
 past it. Instead of "Windows protected your PC", the setup shows this message:
 
 ![The Smart App Control blocked an app message](../images/blocked-an-app.png)
