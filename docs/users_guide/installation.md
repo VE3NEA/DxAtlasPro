@@ -25,7 +25,15 @@ The setup program is not code-signed, so Windows warns about it as it warns abou
 program from a small developer:
 
 - **Edge says the file "isn't commonly downloaded"** - in the Downloads list, click **...**
-  beside the file, then **Keep**, then **Show more** and **Keep anyway**;
+  beside the file, then **Keep**:
+
+  ![Edge Downloads list with the Keep command](../images/isnt-commonly-downloaded.png)
+
+  Edge then asks you to make sure you trust the file. Click the arrow on the **Delete** button
+  and choose **Keep anyway**:
+
+  ![Edge dialog with the Keep anyway command under the Delete button](../images/keep-anyway.png)
+
 - **"Windows protected your PC"** when you run the setup - click **More info**, then
   **Run anyway**;
 - **the setup does not start at all** - right-click the downloaded file in File Explorer,
