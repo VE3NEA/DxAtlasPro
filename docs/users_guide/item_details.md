@@ -14,8 +14,7 @@ time at the point come last.
 - **right-click the map** and pick **Show Details for ...**: the menu item names the label under
   the mouse, or says **Point** where there is no label;
 - in the [Lists Panel](lists_panel.md), **Ctrl-click a row**, or right-click it and pick
-  **Show Details**, to list that row's item. A province or call area is listed with its DXCC entity
-  above it.
+  **Show Details**, to list that row's item alone.
 
 The keys of the Ctrl-click can be changed in the **Mouse Clicks** section of the
 [Settings Dialog](settings.md).
@@ -30,6 +29,10 @@ already gives is not repeated: the zones are listed once, under their own headin
 The local time is given for the moment the [Clock](clock.md) panel shows, with summer time taken
 into account, so with a fixed time on the clock you can see the local time anywhere at any moment
 since 1945.
+
+A click on a map that shows the MUF for 3000 km or the [HF Propagation](propagation_prediction.md)
+layer ends the list with a **Propagation** item: the MUF at the point, or the S-meter reading for the
+band and path chosen in the Ionosphere menu. With no such layer on the map the item is not listed.
 
 The position, grid square, bearing, distance and sunrise and sunset of the point are not listed:
 the [Status Bar](status_bar.md) shows them as you move the mouse.

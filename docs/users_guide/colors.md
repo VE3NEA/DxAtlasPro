@@ -39,7 +39,7 @@ it, then **Apply** or **OK** to redraw the maps in it.
   four fills of the time zones and their boundaries; the date line;
 - **Lines** - the graticule, the azimuth and distance lines, the gray line's shadows and
   terminator, and the highlight of an item found from the [Lists Panel](lists_panel.md);
-- **Labels** - each kind of label: countries, big and small cities, island groups, islands,
+- **Labels** - each kind of label: countries, big and small cities (the 1000 largest are big), island groups, islands,
   oceans, seas, lakes, rivers, mountain ranges, summits, regions, ice shelves and the graticule's
   degrees. Each has a colour, a halo colour around the letters, a size, and bold and italic.
 

@@ -57,7 +57,9 @@ often it is redrawn are set in the **Map** section of the [Settings Dialog](sett
 
 - **Countries**;
 - **Islands** - islands and island groups;
-- **Cities**;
+- **Cities** - a country's capital is marked with a star and the centre of a province or state
+  with a diamond; the capitals' names are placed first, then the other cities', each by population,
+  so the more important names win where labels collide;
 - **Seas** - oceans, seas, gulfs, bays and ice shelves;
 - **Lakes and Rivers**;
 - **Mountains** - mountain ranges and summits;
