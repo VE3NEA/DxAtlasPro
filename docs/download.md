@@ -4,10 +4,10 @@
 
 ### Current Version
 
-DX Atlas Pro v.1.2
+DX Atlas Pro v.1.3
 
-- Windows: [DxAtlasProSetup-v.1.2.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.2/DxAtlasProSetup-v.1.2.exe)
-- Linux x64: [DxAtlasPro-v.1.2-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.2/DxAtlasPro-v.1.2-linux-x64.tar.gz)
+- Windows: [DxAtlasProSetup-v.1.3.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.3/DxAtlasProSetup-v.1.3.exe)
+- Linux x64: [DxAtlasPro-v.1.3-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.3/DxAtlasPro-v.1.3-linux-x64.tar.gz)
 
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
@@ -23,6 +23,18 @@ See [All Releases](https://github.com/VE3NEA/DxAtlasPro/releases)
 <br>
 
 ### Release Notes
+
+#### v.1.3
+
+- the destination marker (antenna) via [DXView](https://www.dxlabsuite.com/dxview/) automation is drawn on both maps
+- new hint style for via [DXView](https://www.dxlabsuite.com/dxview/) spots
+- truncated tooltips for user layers fixed
+- red dots not drawn via [DXView](https://www.dxlabsuite.com/dxview/) automation fixed
+- Show Details dialog has a propagation row
+- the Lists panel shows details only for selected item, not for its parents
+- city labels drawing changed, to make capitals and big cities more visible
+- capitals and state/province centers are shown as stars and diamonds respectively
+- country names are in a larger font
 
 #### v.1.2
 
