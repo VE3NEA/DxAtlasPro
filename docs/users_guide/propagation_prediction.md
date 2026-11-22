@@ -43,12 +43,12 @@ The chart plots the strength of your signal at that point, from your home locati
 frequency from 3 to 30 MHz at 1 MHz steps (up the side) and every quarter hour of UTC (along the
 bottom), for the date the [Clock](clock.md) panel shows. Each cell shows the better of the short
 path and the long path: shades of teal for the short path, olive-yellow for the long path, brighter
-for a stronger signal, S0 at the darkest to S9 at the brightest; a cell with no signal is black.
+for a stronger signal; a cell with no signal is the darkest teal.
 It uses your station as set in the **Propagation** section of the [Settings Dialog](settings.md).
 
 - A dotted line across the chart marks each ham band, labelled with its frequency.
-- A red box marks the quarter hour with the strongest signal on each band.
-- The two bars above the chart show when the sun is up at your home location and at the point.
+- A red box marks the hour with the strongest signal on each band.
+- The two bars above the chart show in yellow when the sun is up at your home location and at the point.
   Dotted vertical lines mark the sunrise and sunset at both; the lines for your home location are
   the lighter ones.
 - A white vertical line marks the time the Clock panel shows.
