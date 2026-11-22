@@ -33,6 +33,31 @@ How to read the map, and how many S units to add or subtract when your station d
 settings, is explained in [HF Propagation](reading_the_maps.md#hf-propagation) on the
 *Reading the Maps for DX'ing* page.
 
+## The Propagation Chart
+
+The map shows one band at one time; the chart shows one place for the whole day. Right-click the
+map where you want to work and choose **Propagation Chart** under **Show Details**. The command is
+there while the amateur radio functions are on.
+
+The chart plots the strength of your signal at that point, from your home location, for every
+frequency from 3 to 30 MHz at 1 MHz steps (up the side) and every quarter hour of UTC (along the
+bottom), for the date the [Clock](clock.md) panel shows. Each cell shows the better of the short
+path and the long path: shades of teal for the short path, olive-yellow for the long path, brighter
+for a stronger signal, S0 at the darkest to S9 at the brightest; a cell with no signal is black.
+It uses your station as set in the **Propagation** section of the [Settings Dialog](settings.md).
+
+- A dotted line across the chart marks each ham band, labelled with its frequency.
+- A red box marks the quarter hour with the strongest signal on each band.
+- The two bars above the chart show when the sun is up at your home location and at the point.
+  Dotted vertical lines mark the sunrise and sunset at both; the lines for your home location are
+  the lighter ones.
+- A white vertical line marks the time the Clock panel shows.
+
+Move the mouse over the chart, and the status bar below it reads that cell: the UTC time, your
+local time, the local time at the point, the frequency, the S-meter reading, the take-off angle at
+your station, the propagation mode - `2F2` is two hops by the F2 layer on a path shorter than 7,000 km, `F2F2`
+the F2 layer at both ends of a longer one - and `SP` or `LP` for the short or the long path. Close the window with **Esc**.
+
 ## Live Updates
 
 The map is computed for a quarter hour of UTC, and changes when the clock enters the next one. With
