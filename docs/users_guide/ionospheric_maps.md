@@ -33,38 +33,12 @@ explained in [Reading the Maps for DX'ing](reading_the_maps.md).
 - **Aurora** - the auroral oval, the probability of visible aurora, from the NOAA Space Weather
   Prediction Center's OVATION model; see [The Aurora Oval](reading_the_maps.md#the-aurora-oval);
 - **Space Weather** - a small panel of the solar flux, Kp, solar wind speed and Bz; see
-  [The Space Weather Panel](#the-space-weather-panel).
+  [Space Weather](space_weather.md).
 
 The maps between the separators exclude one another, and exclude HF Propagation too: picking one
 replaces the map shown. **Magnetic Dip** and **Aurora** are checkboxes of their own, drawn alone or
 over any map. Each map panel has its own choice, so the two maps can show different maps. **Space
 Weather** is a checkbox too, but one for the whole program.
-
-## The Space Weather Panel
-
-Tick **Space Weather** in the Ionosphere menu to show a small panel in the lower right corner of the
-map. It lists four current values, from the NOAA Space Weather Prediction Center:
-
-- **SFI** - the solar flux at 10.7 cm (F10.7), in solar flux units. The higher it is, the higher the
-  MUF, and the better the upper bands;
-- **Kp** - the planetary K index, from 0 to 9, of the latest 3-hour period. Kp 4 and above means a
-  disturbed geomagnetic field, with poor HF conditions on paths that cross the polar regions;
-- **Wind** - the speed of the solar wind at the Earth, in km/s. A fast wind, over 500 km/s, often
-  brings a geomagnetic disturbance within a day or two;
-- **Bz** - the north-south component of the magnetic field carried by the solar wind, in nT. While Bz
-  is negative (southward), the solar wind couples to the Earth's magnetic field, and storms and
-  auroras follow.
-
-The panel belongs to the map whose menu you ticked it in; ticking it in the other map's menu moves it
-there, and unticking it removes it. The choice is the same for both maps and is remembered between
-runs.
-
-Hold the mouse over the panel to see how old each value is: `SFI: 2h 14m ago`. A value the program
-has not received yet, or that is too old to trust - over 1 hour for the wind speed and Bz, over
-36 hours for the SFI and Kp - shows as a dash. The values are downloaded only while the panel is
-shown: at once when it appears, then every 5 minutes for the wind speed and Bz, and every 30
-minutes for the SFI and Kp. If a download fails, the last value stays on the panel until it
-becomes too old.
 
 ## Reading a Map
 

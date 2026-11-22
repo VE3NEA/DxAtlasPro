@@ -67,8 +67,12 @@ items:
       href: award_tracking.md
     - name: Ionospheric Maps
       href: ionospheric_maps.md
+    - name: Space Weather
+      href: space_weather.md
     - name: Propagation Prediction
       href: propagation_prediction.md
+    - name: The Propagation Chart
+      href: propagation_chart.md
     - name: Pre-computing Propagation
       href: precompute_propagation.md
     - name: Reading the Maps for DX'ing

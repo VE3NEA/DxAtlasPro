@@ -35,36 +35,9 @@ settings, is explained in [HF Propagation](reading_the_maps.md#hf-propagation) o
 
 ## The Propagation Chart
 
-![Propagation chart](../images/propagation_chart.png)
-
-The map shows one band at one time; the chart shows one place for the whole day. Right-click the
-map where you want to work and choose **Propagation Chart** under **Show Details**. The command is
-there while the amateur radio functions are on. The line above the chart reads, for example,
-`Home to VK6 (31° S, 116° E)`: the prefix of the point where it has one, and its position.
-
-The chart plots the strength of your signal at that point, from your home location, for the
-whole UTC day of the date the [Clock](clock.md) panel shows. There is one strip for each ham band,
-80 m at the bottom to 10 m at the top, and the time runs along the bottom in UTC, in steps of half
-an hour. It uses your station as set in the **Propagation** section of the
-[Settings Dialog](settings.md).
-
-Each cell is coloured by the better of the short and the long path: in blue where the short path is
-better, in orange where the long path is. The colour darkens with each whole S unit from S1 to S9;
-a cell below S1, or with no signal, is white.
-
-- A green star in each strip marks the best hour of that band - the hour with the strongest signal.
-  A band with no signal all day has none.
-- The two bars above the chart show the day at your home location and at the point: yellow where
-  the sun is up, grey where it is down. Dashed vertical lines mark the sunrise and sunset at both.
-- A red vertical line marks the time the Clock panel shows, with a sun on each bar. While the
-  Clock panel follows the current time, the line moves every 5 minutes.
-
-Move the mouse over the chart, and the status bar below it reads that cell: the UTC time, your
-local time, the local time at the point, the band, the S-meter reading, the take-off angle at
-your station, the propagation mode - `2F2` is two hops by the F2 layer on a path shorter than 7,000 km, `F2F2`
-the F2 layer at both ends of a longer one - and `SP` or `LP` for the better path in that cell. A
-cell with no prediction reads `no signal`. The chart is computed when the window opens, which
-takes a moment, and is for the time and the conditions of that moment. Close the window with **Esc**.
+The map shows one band at one time. To see one place for the whole day, right-click the map where you
+want to work and choose **Propagation Chart** under **Show Details**; see
+[The Propagation Chart](propagation_chart.md).
 
 ## Live Updates
 
