@@ -57,10 +57,14 @@ DX Atlas licences do not cover it; see [Register](https://ve3nea.github.io/DxAtl
   density (NmD) and magnetic dip. The maps reflect the current conditions using the sunspot
   number and the Ap index downloaded automatically;
 - the auroral oval in real time, from the NOAA Space Weather Prediction Center;
+- a Space Weather panel on the map: the solar flux, Kp, solar wind speed and Bz, in real time from
+  the same source;
 - HF propagation prediction maps computed with the DVOACAP engine: the signal strength from your
   station on the selected band and hour, updated in real time to reflect geomagnetic disturbances
-  using the STORM model, and maps pre-computed for all bands and hours of the day.
+  using the STORM model, and maps pre-computed for all bands and hours of the day;
+- a propagation chart for any point of the map: the signal from your station on every ham band
+  through the whole day, with the best time of each band marked.
 
-*The real-time data - the auroral oval, the Ap index and the sunspot numbers - are available only
+*The real-time data - the auroral oval, the space weather values, the Ap index and the sunspot numbers - are available only
 as long as the NOAA Space Weather Prediction Center, the GFZ Helmholtz Centre for Geosciences and
 irimodel.org provide them on the web.*
