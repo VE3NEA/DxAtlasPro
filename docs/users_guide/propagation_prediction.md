@@ -37,15 +37,14 @@ settings, is explained in [HF Propagation](reading_the_maps.md#hf-propagation) o
 
 The map shows one band at one time; the chart shows one place for the whole day. Right-click the
 map where you want to work and choose **Propagation Chart** under **Show Details**. The command is
-there while the amateur radio functions are on.
+there while the amateur radio functions are on. The line above the chart names the point by its
+prefix, such as `VK6`, with its position after it.
 
 The chart plots the strength of your signal at that point, from your home location, for every
 frequency from 3 to 30 MHz at 1 MHz steps (up the side) and every quarter hour of UTC (along the
-bottom), for the date the [Clock](clock.md) panel shows. The chart is of one path, the short path
-or, with **Long Path** ticked above the chart, the long path; the box starts as the Long Path
-setting of the map, and ticking or clearing it computes the chart again for the other path without
-changing the map. The cells take the colours of the HF Propagation map's S-meter bands, from S1 up;
-a cell below S1, or with no signal, is grey.
+bottom), for the date the [Clock](clock.md) panel shows. Each cell shows the better of the short and
+the long path: teal where the short path is better, olive to yellow where the long path is, brighter
+for each whole S unit from S1 to S9. A cell below S1, or with no signal, is grey.
 It uses your station as set in the **Propagation** section of the [Settings Dialog](settings.md).
 
 - A dotted line across the chart marks each ham band, labelled with its frequency.
@@ -57,7 +56,7 @@ It uses your station as set in the **Propagation** section of the [Settings Dial
 Move the mouse over the chart, and the status bar below it reads that cell: the UTC time, your
 local time, the local time at the point, the frequency, the S-meter reading, the take-off angle at
 your station, the propagation mode - `2F2` is two hops by the F2 layer on a path shorter than 7,000 km, `F2F2`
-the F2 layer at both ends of a longer one - and `SP` or `LP` for the path the chart shows. Close the window with **Esc**.
+the F2 layer at both ends of a longer one - and `SP` or `LP` for the better path in that cell. Close the window with **Esc**.
 
 ## Live Updates
 
