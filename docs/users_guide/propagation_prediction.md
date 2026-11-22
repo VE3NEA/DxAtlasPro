@@ -35,6 +35,8 @@ settings, is explained in [HF Propagation](reading_the_maps.md#hf-propagation) o
 
 ## The Propagation Chart
 
+![Propagation chart](../images/propagation_chart.png)
+
 The map shows one band at one time; the chart shows one place for the whole day. Right-click the
 map where you want to work and choose **Propagation Chart** under **Show Details**. The command is
 there while the amateur radio functions are on. The line above the chart reads, for example,
