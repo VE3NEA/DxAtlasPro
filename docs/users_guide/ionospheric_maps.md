@@ -37,6 +37,13 @@ The maps between the separators exclude one another, and exclude HF Propagation 
 replaces the map shown. **Magnetic Dip** and **Aurora** are checkboxes of their own, drawn alone or
 over any map. Each map panel has its own choice, so the two maps can show different maps.
 
+**Space Weather** is a checkbox of the menu's too, but one for the whole program: it shows a small
+panel in the lower right corner of the map in which you ticked it - the solar flux (SFI), the planetary
+Kp, the solar wind speed in km/s and the Bz component of the interplanetary magnetic field in nT, from
+the NOAA Space Weather Prediction Center. Ticking it in the other map's menu moves the panel there. A
+value that is missing, or too old - over 1 hour for the wind speed and Bz, 36 hours for the SFI and Kp -
+shows as a dash. Hold the mouse over the panel to see how old each value is. The values are downloaded
+only while the panel is shown.
 ## Reading a Map
 
 Each map is drawn in bands of colour, with the legend in the lower left corner of the map: its
