@@ -746,6 +746,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/propagation_chart.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/propagation_chart.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/run-anyway.png",
       "output": {
         "resource": {
@@ -1149,6 +1159,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "users_guide/propagation_chart.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/propagation_chart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "users_guide/propagation_prediction.md",
       "output": {
         ".html": {
@@ -1193,6 +1213,16 @@
       "output": {
         ".html": {
           "relative_path": "users_guide/settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "users_guide/space_weather.md",
+      "output": {
+        ".html": {
+          "relative_path": "users_guide/space_weather.html"
         }
       },
       "version": ""

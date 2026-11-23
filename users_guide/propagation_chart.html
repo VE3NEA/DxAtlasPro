@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>The Propagation Chart | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="The Propagation Chart | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/propagation_chart.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="the-propagation-chart">The Propagation Chart</h1>
+
+<p><img src="../images/propagation_chart.png" alt="Propagation chart"></p>
+<p>The propagation map answers &quot;where can I work on this band right now?&quot;; the chart answers the
+opposite question: &quot;when, and on which band, can I work this one place?&quot; Use it to plan a QSO with a
+DX station, to decide when to be on the air for a DXpedition, or to see whether a path you need is
+worth trying today at all.</p>
+<h2 id="opening-the-chart">Opening the Chart</h2>
+<p>Right-click the map at the place you want to work - a DXpedition's island, a station's grid square,
+an entity you still need - and choose <strong>Show Details &gt; Propagation Chart</strong>. The command is there while
+the amateur radio functions are on. The chart is for the path from your home location to that point,
+for your station as set in the <strong>Propagation</strong> section of the <a href="settings.html">Settings Dialog</a>, and for
+the UTC day of the date the <a href="clock.html">Clock</a> panel shows. Close it with <strong>Esc</strong>.</p>
+<h2 id="finding-the-best-band-and-time">Finding the Best Band and Time</h2>
+<p>Each row of the chart is a band and each column is half an hour of UTC; the darker a cell, the
+stronger your signal at the DX end.</p>
+<ul>
+<li><strong>Pick the hour.</strong> Look down a column for the darkest cell to see which band to use at that hour.</li>
+<li><strong>Pick the band.</strong> Look along a row for the dark stretch to see when that band is open. The green
+star marks the band's best hour; a row with no star never opens to that point on that day.</li>
+<li><strong>Plan a session.</strong> A path often moves up the bands as the day goes on and down again in the
+evening. Follow the dark cells from row to row to see when to change bands, and when the last band
+closes.</li>
+</ul>
+<p>Hover over a cell for the exact reading in the status bar below the chart: the S-meter reading, the
+UTC time and the local time at both ends, the take-off angle and the propagation mode. The readings
+are for the station in the settings; for a bigger or smaller station, shift them by one S unit for
+every 6 dB, as explained in <a href="reading_the_maps.html#hf-propagation">HF Propagation</a>.</p>
+<h2 id="short-path-or-long-path">Short Path or Long Path</h2>
+<p>A blue cell means the short path is the better one at that time, an orange cell the long path, and
+the status bar reads <code>SP</code> or <code>LP</code>. When you reach an orange stretch, turn the beam the other way, 180°
+from the short-path bearing, and listen for the signal from that direction. Long-path openings are
+often short and come at hours when the short path is closed, so the chart is the easiest way to
+find them.</p>
+<h2 id="gray-line-on-the-low-bands">Gray Line on the Low Bands</h2>
+<p>The two bars above the chart show daylight at your end and at the DX end, with dashed lines at
+sunrise and sunset. On 80 and 40 m, look for the hours when your sunrise or sunset is close to the
+DX station's sunrise or sunset: that is where a gray-line opening is most likely, and where the
+chart often shows a short dark stretch on the low bands. Why the gray line helps is explained in
+<a href="reading_the_maps.html#gray-line">Gray Line</a>.</p>
+<h2 id="choosing-an-antenna">Choosing an Antenna</h2>
+<p>The take-off angle in the status bar tells you which antenna will do the job: a long path usually
+needs a low angle, a few degrees above the horizon, which favours a high beam or a vertical over a
+low dipole. If you have several antennas, use the one that is strongest at that angle.</p>
+<h2 id="planning-ahead">Planning Ahead</h2>
+<p>The chart is computed for the date the Clock panel shows, at the moment it opens. To plan for a
+later date - the start of a DXpedition, say - set the Clock panel to that date, then open the chart
+again. The red vertical line marks the time the Clock panel shows; while the Clock panel follows the
+current time, the line moves with it, so you can leave the chart open during an operating session.</p>
+<h2 id="from-the-chart-back-to-the-map">From the Chart Back to the Map</h2>
+<p>When the chart shows a good band and hour for one place, show that band on the
+<a href="propagation_prediction.html">propagation map</a> and set the Clock panel to that hour to see where else
+the band is open at the same time - other stations you could work during the same opening.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© 2026 Alex Shovkoplyas, VE3NEA ·&nbsp;<a href="https://ve3nea.github.io/DxAtlasPro/privacy.html">Privacy Policy</a> ·&nbsp;<a href="mailto:support@dxatlas.com">support@dxatlas.com</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

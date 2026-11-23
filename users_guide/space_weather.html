@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Space Weather | DX Atlas Pro </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Space Weather | DX Atlas Pro ">
+      
+      
+      <link rel="icon" href="../images/DxAtlasPro.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/VE3NEA/DxAtlasPro/blob/master/docs/users_guide/space_weather.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/dxatlaspro_icon.png" alt="DX Atlas Pro">
+            DX Atlas Pro
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="space-weather">Space Weather</h1>
+
+<p>The propagation and ionospheric maps show the ionosphere of a typical day of the month. The Space
+Weather panel tells you how today differs from that typical day: whether to expect better
+conditions than predicted on the high bands, or a storm that will close the polar paths. Click the
+<strong>Ionosphere</strong> button on the map toolbar and tick <strong>Space Weather</strong> to show the panel in the lower right corner of the map; the values
+come from the NOAA Space Weather Prediction Center and update by themselves while the panel is shown.</p>
+<h2 id="before-you-get-on-the-air">Before You Get on the Air</h2>
+<p>Glance at the panel to decide which bands and which paths are worth trying:</p>
+<ul>
+<li><strong>SFI</strong>, the solar flux, tells you how high the bands go. Around 70, 15 and 10 m are seldom open
+beyond short skip; above 150, expect 10 m to open in daytime on long paths; the higher the SFI,
+the earlier the high bands open and the later they close;</li>
+<li><strong>Kp</strong> tells you whether the geomagnetic field is quiet. At Kp 0 to 2, conditions are as
+predicted, and the low bands are at their best. At Kp 4 and above, expect paths that pass near
+the poles - Europe to the west coast of North America, North America to Asia - to be weak or
+closed, and look for another route: see <a href="reading_the_maps.html#finding-an-alternate-route">Finding an Alternate Route</a>.</li>
+</ul>
+<h2 id="watching-for-a-storm">Watching for a Storm</h2>
+<p><strong>Wind</strong> and <strong>Bz</strong> tell you what is coming, a few hours before Kp shows it:</p>
+<ul>
+<li>a solar wind over 500 km/s often brings a disturbance within a day or two;</li>
+<li>a Bz that stays negative (southward) for hours, especially with a fast wind, means a storm is
+starting.</li>
+</ul>
+<p>When you see these signs, show the <strong>Aurora</strong> map (<a href="ionospheric_maps.html">Ionospheric Maps</a>) to watch
+the oval grow towards the equator. A storm closes the polar paths, but it also brings auroral E on
+10 and 6 m to stations near the oval, and good conditions on the paths that cross the equator.</p>
+<h2 id="using-the-values-in-the-predictions">Using the Values in the Predictions</h2>
+<p>The maps do not use the SFI and Kp shown on the panel. With <strong>Use STORM Model</strong> ticked in
+<strong>Tools &gt; Ionospheric Parameters...</strong>, the maps follow geomagnetic disturbances by themselves from the
+Ap index. To see how the bands would look at a different solar activity, enter a sunspot number of
+your own in the same dialog; see <a href="ionospheric_maps.html#the-ionospheric-parameters-dialog">Ionospheric Maps</a>.</p>
+<h2 id="is-the-value-current">Is the Value Current?</h2>
+<p>Hover over the panel to see how old each value is. A dash means the program has no value recent
+enough to trust - over 1 hour old for the wind and Bz, over 36 hours for the SFI and Kp - usually
+because there is no Internet connection. The values are downloaded only while the panel is shown.</p>
+<p>The panel is shown on one map at a time: ticking it under the other map's
+Ionosphere button moves it there.</p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>© 2026 Alex Shovkoplyas, VE3NEA ·&nbsp;<a href="https://ve3nea.github.io/DxAtlasPro/privacy.html">Privacy Policy</a> ·&nbsp;<a href="mailto:support@dxatlas.com">support@dxatlas.com</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
