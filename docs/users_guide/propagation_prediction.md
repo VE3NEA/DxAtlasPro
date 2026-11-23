@@ -1,4 +1,4 @@
-# Propagation Prediction
+# Propagation Map
 
 ![Real-time propagation](../images/gallery/real-time-propagation.png)
 

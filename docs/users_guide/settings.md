@@ -49,7 +49,7 @@ The settings both maps share:
 ## Propagation
 
 What the propagation map is computed for; see
-[Propagation Prediction](propagation_prediction.md). This section is shown only with the
+[Propagation Map](propagation_prediction.md). This section is shown only with the
 [Amateur Radio functions](amateur_radio_switch.md) on.
 
 ## Lists

@@ -11,7 +11,7 @@ find another route for the signal: a skewed path, a chordal hop, the long path, 
 open along a different arc.
 
 This page explains what each map tells a DXer. The controls that show the maps are described in
-[Ionospheric Maps](ionospheric_maps.md) and [Propagation Prediction](propagation_prediction.md).
+[Ionospheric Maps](ionospheric_maps.md) and [Propagation Map](propagation_prediction.md).
 
 The ionospheric maps are computed with the IRI-2026 model, which gives the monthly median
 ionosphere for the sunspot number of the month. With **Use STORM Model** on, foF2 is corrected for

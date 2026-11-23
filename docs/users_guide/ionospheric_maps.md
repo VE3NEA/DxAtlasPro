@@ -15,7 +15,7 @@ explained in [Reading the Maps for DX'ing](reading_the_maps.md).
 ![The Ionosphere button's menu](../images/ionosphere_menu.png)
 
 - **HF Propagation**, **Band** and **Long Path** - the propagation map; see
-  [Propagation Prediction](propagation_prediction.md);
+  [Propagation Map](propagation_prediction.md);
 - **None**, or one of the ionospheric maps:
   - **F2 Layer Critical Frequency** - foF2, the highest frequency the F2 layer reflects straight
     up, in MHz; see [foF2 and MUF(3000)](reading_the_maps.md#fof2-and-muf3000);
