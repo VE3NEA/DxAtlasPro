@@ -4,10 +4,10 @@
 
 ### Current Version
 
-DX Atlas Pro v.1.3
+DX Atlas Pro v.1.4
 
-- Windows: [DxAtlasProSetup-v.1.3.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.3/DxAtlasProSetup-v.1.3.exe)
-- Linux x64: [DxAtlasPro-v.1.3-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.3/DxAtlasPro-v.1.3-linux-x64.tar.gz)
+- Windows: [DxAtlasProSetup-v.1.4.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.4/DxAtlasProSetup-v.1.4.exe)
+- Linux x64: [DxAtlasPro-v.1.4-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.4/DxAtlasPro-v.1.4-linux-x64.tar.gz)
 
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
@@ -23,6 +23,13 @@ See [All Releases](https://github.com/VE3NEA/DxAtlasPro/releases)
 <br>
 
 ### Release Notes
+
+#### v.1.4
+
+- the new Propagation Chart dialog, opened from the map menu, shows hourly propagation on all bands for a single path
+- the new Space Weather panel in the lower right corner of the map shows the SFI, Kp index, solar wind speed and Bz from NOAA SWPC
+- the Lists panel now shows a count bar
+- the ten pin colours can now be edited in the Colors dialog
 
 #### v.1.3
 

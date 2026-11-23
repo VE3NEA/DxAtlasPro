@@ -7,7 +7,7 @@ _layout: landing
 <div style="display: flex; align-items: center; justify-content: center; gap: 16px">
 <div style="text-align: left">
 
-# DX Atlas Pro v.1.3
+# DX Atlas Pro v.1.4
 
 _Copyright &copy; 2026 Alex Shovkoplyas, VE3NEA_
 
