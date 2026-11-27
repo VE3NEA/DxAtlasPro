@@ -31,9 +31,10 @@ glyph of the current one.
 ## Zoom
 
 Turn the mouse wheel over the map to zoom in and out; three steps of the wheel double or halve the
-magnification. On the rectangular map the zoom keeps the point under the mouse in place, so the
-wheel takes you to a place as well as closer to it. The azimuthal map and the globe zoom about
-their centre, which stays where it is.
+magnification. On the rectangular and azimuthal maps the zoom keeps the point under the mouse in
+place, so the wheel takes you to a place as well as closer to it; the azimuthal map does it by
+sliding on the screen, and its centre stays the same point. The globe zooms about its centre,
+which stays where it is.
 
 The status bar shows the scale of the map under the mouse, in metres or feet per pixel, as set in
 the **Units** section of the [Settings Dialog](settings.md).
@@ -43,8 +44,9 @@ the **Units** section of the [Settings Dialog](settings.md).
 - **Rectangular map** - drag the map with the left mouse button;
 - **Globe** - drag the globe to turn it;
 - **Azimuthal map** - drag the map with the left mouse button to slide it on the screen, for
-  example to put your home in the lower left corner and the DX in the upper right. The centre of
-  the map stays where it is, since every distance and bearing on it is measured from the centre.
+  example to put your home in the lower left corner and the DX in the upper right. The map can be
+  dragged almost off the screen, but a strip of it always stays in view. The centre of the map
+  stays where it is, since every distance and bearing on it is measured from the centre.
   To change the centre, Shift-click a point, or right-click it and pick **Set as Center**.
   Ctrl+Shift-click a point, or pick **Set Antipode as Center**, to centre the map on the point
   opposite it on the globe.
