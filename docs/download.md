@@ -4,10 +4,10 @@
 
 ### Current Version
 
-DX Atlas Pro v.1.4
+DX Atlas Pro v.1.5
 
-- Windows: [DxAtlasProSetup-v.1.4.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.4/DxAtlasProSetup-v.1.4.exe)
-- Linux x64: [DxAtlasPro-v.1.4-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.4/DxAtlasPro-v.1.4-linux-x64.tar.gz)
+- Windows: [DxAtlasProSetup-v.1.5.exe](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.5/DxAtlasProSetup-v.1.5.exe)
+- Linux x64: [DxAtlasPro-v.1.5-linux-x64.tar.gz](https://github.com/VE3NEA/DxAtlasPro/releases/download/v.1.5/DxAtlasPro-v.1.5-linux-x64.tar.gz)
 
 See [System Requirements](users_guide/system_requirements.md) and
 [Installation](users_guide/installation.md).
@@ -23,6 +23,12 @@ See [All Releases](https://github.com/VE3NEA/DxAtlasPro/releases)
 <br>
 
 ### Release Notes
+
+#### v.1.5
+
+- the azimuthal map can now be dragged with the left mouse button; its centre stays put, so bearings and distances don't change, and the Home button puts it back in the middle
+- the spot hover label via [DXView](https://www.dxlabsuite.com/dxview/) automation now works on both maps
+- the font size of a custom layer set via [DXView](https://www.dxlabsuite.com/dxview/) automation now reaches the labels
 
 #### v.1.4
 

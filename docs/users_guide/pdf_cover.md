@@ -2,7 +2,7 @@
 
 <h1>DX Atlas Pro</h1>
 
-<h4>v.1.4</h4>
+<h4>v.1.5</h4>
 
 <br>
 

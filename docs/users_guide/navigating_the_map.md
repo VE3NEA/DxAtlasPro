@@ -42,13 +42,16 @@ the **Units** section of the [Settings Dialog](settings.md).
 
 - **Rectangular map** - drag the map with the left mouse button;
 - **Globe** - drag the globe to turn it;
-- **Azimuthal map** - its centre is chosen, not dragged, since every distance and bearing on it is
-  measured from the centre. Shift-click a point to make it the centre, or right-click it and pick
-  **Set as Center**. Ctrl+Shift-click a point, or pick **Set Antipode as Center**, to centre the map
-  on the point opposite it on the globe.
+- **Azimuthal map** - drag the map with the left mouse button to slide it on the screen, for
+  example to put your home in the lower left corner and the DX in the upper right. The centre of
+  the map stays where it is, since every distance and bearing on it is measured from the centre.
+  To change the centre, Shift-click a point, or right-click it and pick **Set as Center**.
+  Ctrl+Shift-click a point, or pick **Set Antipode as Center**, to centre the map on the point
+  opposite it on the globe.
 
 The **Home** button on the toolbar shows the whole world on the rectangular map, and centres the
-azimuthal map and the globe on your home location.
+azimuthal map and the globe on your home location; a slid azimuthal map goes back to the middle of
+the screen.
 
 ## Linking the Two Maps
 
